@@ -1,0 +1,16 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<svg x="0px" y="0px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="Red_to_Black" style="enable-background:new 0 0 32 32">
+  <style type="text/css">
+	.Red{fill:#D11C1C;}
+	.Black{fill:#727272;}
+	.st0{opacity:0.5;}
+</style>
+  <circle cx="9" cy="9" r="7" class="Red" />
+  <g class="st0">
+    <circle cx="9" cy="25" r="7" class="Black" />
+  </g>
+  <g class="st0">
+    <circle cx="25" cy="9" r="7" class="Red" />
+  </g>
+  <circle cx="25" cy="25" r="7" class="Black" />
+</svg>

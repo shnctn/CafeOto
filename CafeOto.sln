@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CafeOto.Entities", "CafeOto.Entities\CafeOto.Entities.csproj", "{8E2B3849-2FC9-426F-B082-0BD853FA2F9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CafeOto.WinForm", "CafeOto.WinForm\CafeOto.WinForm.csproj", "{F517F2AD-812E-4CB7-82D1-9F1C8865DC7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E2B3849-2FC9-426F-B082-0BD853FA2F9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E2B3849-2FC9-426F-B082-0BD853FA2F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E2B3849-2FC9-426F-B082-0BD853FA2F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E2B3849-2FC9-426F-B082-0BD853FA2F9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F517F2AD-812E-4CB7-82D1-9F1C8865DC7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F517F2AD-812E-4CB7-82D1-9F1C8865DC7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F517F2AD-812E-4CB7-82D1-9F1C8865DC7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F517F2AD-812E-4CB7-82D1-9F1C8865DC7F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C71175D-9232-457B-9D8A-0E753675E1CE}
+	EndGlobalSection
+EndGlobal
