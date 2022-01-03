@@ -29,6 +29,7 @@ namespace CafeOto.WinForm.Masalar
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -39,6 +40,12 @@ namespace CafeOto.WinForm.Masalar
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMasaSiparisleri));
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
@@ -48,6 +55,7 @@ namespace CafeOto.WinForm.Masalar
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnSonuclandir = new DevExpress.XtraEditors.SimpleButton();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
+            this.btnYazdir = new DevExpress.XtraEditors.SimpleButton();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.btnYenile = new DevExpress.XtraEditors.SimpleButton();
             this.btnSiparisEkle = new DevExpress.XtraEditors.SimpleButton();
@@ -85,6 +93,7 @@ namespace CafeOto.WinForm.Masalar
             this.Urun = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMiktari = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colBirimFiyati = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryFiyat = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colIndirimTutari = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTutar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAciklama = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -95,12 +104,21 @@ namespace CafeOto.WinForm.Masalar
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.txtAciklama = new DevExpress.XtraEditors.MemoEdit();
             this.btnMusteriSil = new DevExpress.XtraEditors.SimpleButton();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.dateEditTarih = new DevExpress.XtraEditors.DateEdit();
             this.lookUpMusteri = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.navigationPane1 = new DevExpress.XtraBars.Navigation.NavigationPane();
+            this.radialMenu1 = new DevExpress.XtraBars.Ribbon.RadialMenu(this.components);
+            this.barFiyat1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barFiyat3 = new DevExpress.XtraBars.BarButtonItem();
+            this.barFiyat2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -122,21 +140,24 @@ namespace CafeOto.WinForm.Masalar
             ((System.ComponentModel.ISupportInitialize)(this.gridControlSiparisler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewSiparis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositorySipariSil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryFiyat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewOdeme)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditTarih.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditTarih.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpMusteri.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.navigationPane1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radialMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl7
             // 
             this.labelControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl7.Location = new System.Drawing.Point(698, 43);
+            this.labelControl7.Location = new System.Drawing.Point(704, 43);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(80, 13);
             this.labelControl7.TabIndex = 0;
@@ -145,7 +166,7 @@ namespace CafeOto.WinForm.Masalar
             // labelControl5
             // 
             this.labelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl5.Location = new System.Drawing.Point(322, 43);
+            this.labelControl5.Location = new System.Drawing.Point(328, 43);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(87, 13);
             this.labelControl5.TabIndex = 0;
@@ -154,7 +175,7 @@ namespace CafeOto.WinForm.Masalar
             // labelControl6
             // 
             this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl6.Location = new System.Drawing.Point(737, 17);
+            this.labelControl6.Location = new System.Drawing.Point(743, 17);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(41, 13);
             this.labelControl6.TabIndex = 0;
@@ -171,7 +192,7 @@ namespace CafeOto.WinForm.Masalar
             // labelControl4
             // 
             this.labelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl4.Location = new System.Drawing.Point(334, 17);
+            this.labelControl4.Location = new System.Drawing.Point(340, 17);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(75, 13);
             this.labelControl4.TabIndex = 0;
@@ -189,13 +210,14 @@ namespace CafeOto.WinForm.Masalar
             // 
             this.groupControl1.Controls.Add(this.btnSonuclandir);
             this.groupControl1.Controls.Add(this.btnKapat);
+            this.groupControl1.Controls.Add(this.btnYazdir);
             this.groupControl1.Controls.Add(this.btnKaydet);
             this.groupControl1.Controls.Add(this.btnYenile);
             this.groupControl1.Controls.Add(this.btnSiparisEkle);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupControl1.Location = new System.Drawing.Point(0, 450);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(930, 79);
+            this.groupControl1.Size = new System.Drawing.Size(936, 79);
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "İşlemler";
             // 
@@ -203,21 +225,33 @@ namespace CafeOto.WinForm.Masalar
             // 
             this.btnSonuclandir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSonuclandir.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.apply_32x32;
-            this.btnSonuclandir.Location = new System.Drawing.Point(694, 26);
+            this.btnSonuclandir.Location = new System.Drawing.Point(700, 26);
             this.btnSonuclandir.Name = "btnSonuclandir";
             this.btnSonuclandir.Size = new System.Drawing.Size(124, 48);
             this.btnSonuclandir.TabIndex = 0;
             this.btnSonuclandir.Text = "Sonuclandır";
+            this.btnSonuclandir.Click += new System.EventHandler(this.btnSonuclandir_Click);
             // 
             // btnKapat
             // 
             this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKapat.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.close_32x32;
-            this.btnKapat.Location = new System.Drawing.Point(824, 26);
+            this.btnKapat.Location = new System.Drawing.Point(830, 26);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(94, 48);
             this.btnKapat.TabIndex = 0;
             this.btnKapat.Text = "KAPAT";
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
+            // 
+            // btnYazdir
+            // 
+            this.btnYazdir.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.printer_32x32;
+            this.btnYazdir.Location = new System.Drawing.Point(273, 26);
+            this.btnYazdir.Name = "btnYazdir";
+            this.btnYazdir.Size = new System.Drawing.Size(82, 48);
+            this.btnYazdir.TabIndex = 0;
+            this.btnYazdir.Text = "YAZDIR";
+            this.btnYazdir.Click += new System.EventHandler(this.btnYazdir_Click);
             // 
             // btnKaydet
             // 
@@ -259,7 +293,7 @@ namespace CafeOto.WinForm.Masalar
             this.lblBaslik.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblBaslik.Location = new System.Drawing.Point(0, 0);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(930, 43);
+            this.lblBaslik.Size = new System.Drawing.Size(936, 43);
             this.lblBaslik.TabIndex = 8;
             this.lblBaslik.Text = "Masa Siparişleri";
             // 
@@ -280,13 +314,13 @@ namespace CafeOto.WinForm.Masalar
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl1.Location = new System.Drawing.Point(0, 375);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(930, 75);
+            this.panelControl1.Size = new System.Drawing.Size(936, 75);
             this.panelControl1.TabIndex = 9;
             // 
             // calcIndirimliToplam
             // 
             this.calcIndirimliToplam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcIndirimliToplam.Location = new System.Drawing.Point(788, 40);
+            this.calcIndirimliToplam.Location = new System.Drawing.Point(794, 40);
             this.calcIndirimliToplam.Name = "calcIndirimliToplam";
             this.calcIndirimliToplam.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.calcIndirimliToplam.Properties.Appearance.Options.UseBackColor = true;
@@ -304,7 +338,7 @@ namespace CafeOto.WinForm.Masalar
             // calcToplam
             // 
             this.calcToplam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcToplam.Location = new System.Drawing.Point(788, 14);
+            this.calcToplam.Location = new System.Drawing.Point(794, 14);
             this.calcToplam.Name = "calcToplam";
             this.calcToplam.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.calcToplam.Properties.Appearance.Options.UseBackColor = true;
@@ -322,7 +356,7 @@ namespace CafeOto.WinForm.Masalar
             // calcIndirimOrani
             // 
             this.calcIndirimOrani.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcIndirimOrani.Location = new System.Drawing.Point(415, 40);
+            this.calcIndirimOrani.Location = new System.Drawing.Point(421, 40);
             this.calcIndirimOrani.Name = "calcIndirimOrani";
             this.calcIndirimOrani.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.calcIndirimOrani.Properties.Appearance.Options.UseBackColor = true;
@@ -374,7 +408,7 @@ namespace CafeOto.WinForm.Masalar
             // calcİndirimToplami
             // 
             this.calcİndirimToplami.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcİndirimToplami.Location = new System.Drawing.Point(415, 14);
+            this.calcİndirimToplami.Location = new System.Drawing.Point(421, 14);
             this.calcİndirimToplami.Name = "calcİndirimToplami";
             this.calcİndirimToplami.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.calcİndirimToplami.Properties.Appearance.Options.UseBackColor = true;
@@ -524,16 +558,18 @@ namespace CafeOto.WinForm.Masalar
             this.navigationSiparis.Controls.Add(this.panelControl2);
             this.navigationSiparis.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.formatastable_32x32;
             this.navigationSiparis.Name = "navigationSiparis";
-            this.navigationSiparis.Size = new System.Drawing.Size(843, 268);
+            this.navigationSiparis.Size = new System.Drawing.Size(849, 268);
             // 
             // gridControlSiparisler
             // 
-            this.gridControlSiparisler.Location = new System.Drawing.Point(0, 91);
+            this.gridControlSiparisler.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControlSiparisler.Location = new System.Drawing.Point(0, 85);
             this.gridControlSiparisler.MainView = this.gridViewSiparis;
             this.gridControlSiparisler.Name = "gridControlSiparisler";
             this.gridControlSiparisler.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositorySipariSil});
-            this.gridControlSiparisler.Size = new System.Drawing.Size(843, 168);
+            this.repositorySipariSil,
+            this.repositoryFiyat});
+            this.gridControlSiparisler.Size = new System.Drawing.Size(849, 183);
             this.gridControlSiparisler.TabIndex = 0;
             this.gridControlSiparisler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSiparis,
@@ -626,13 +662,24 @@ namespace CafeOto.WinForm.Masalar
             // 
             // colBirimFiyati
             // 
+            this.colBirimFiyati.ColumnEdit = this.repositoryFiyat;
             this.colBirimFiyati.DisplayFormat.FormatString = "C2";
             this.colBirimFiyati.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colBirimFiyati.FieldName = "BirimFiyati";
             this.colBirimFiyati.Name = "colBirimFiyati";
+            this.colBirimFiyati.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.colBirimFiyati.Visible = true;
             this.colBirimFiyati.VisibleIndex = 3;
             this.colBirimFiyati.Width = 85;
+            // 
+            // repositoryFiyat
+            // 
+            this.repositoryFiyat.AutoHeight = false;
+            editorButtonImageOptions3.Image = global::CafeOto.WinForm.Properties.Resources.bosale_16x16;
+            this.repositoryFiyat.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.repositoryFiyat.Name = "repositoryFiyat";
+            this.repositoryFiyat.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repositoryFiyat_ButtonClick);
             // 
             // colIndirimTutari
             // 
@@ -697,7 +744,7 @@ namespace CafeOto.WinForm.Masalar
             // 
             this.panelControl2.Controls.Add(this.txtAciklama);
             this.panelControl2.Controls.Add(this.btnMusteriSil);
-            this.panelControl2.Controls.Add(this.dateEdit1);
+            this.panelControl2.Controls.Add(this.dateEditTarih);
             this.panelControl2.Controls.Add(this.lookUpMusteri);
             this.panelControl2.Controls.Add(this.labelControl10);
             this.panelControl2.Controls.Add(this.labelControl9);
@@ -705,7 +752,7 @@ namespace CafeOto.WinForm.Masalar
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(843, 85);
+            this.panelControl2.Size = new System.Drawing.Size(849, 85);
             this.panelControl2.TabIndex = 1;
             // 
             // txtAciklama
@@ -724,17 +771,17 @@ namespace CafeOto.WinForm.Masalar
             this.btnMusteriSil.TabIndex = 14;
             this.btnMusteriSil.Click += new System.EventHandler(this.btnMusteriSil_Click);
             // 
-            // dateEdit1
+            // dateEditTarih
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(532, 7);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEditTarih.EditValue = null;
+            this.dateEditTarih.Location = new System.Drawing.Point(532, 7);
+            this.dateEditTarih.Name = "dateEditTarih";
+            this.dateEditTarih.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEditTarih.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(308, 20);
-            this.dateEdit1.TabIndex = 13;
+            this.dateEditTarih.Size = new System.Drawing.Size(308, 20);
+            this.dateEditTarih.TabIndex = 13;
             // 
             // lookUpMusteri
             // 
@@ -806,24 +853,115 @@ namespace CafeOto.WinForm.Masalar
             this.navigationPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.navigationSiparis,
             this.navigationOdemeler});
-            this.navigationPane1.RegularSize = new System.Drawing.Size(930, 332);
+            this.navigationPane1.RegularSize = new System.Drawing.Size(936, 332);
             this.navigationPane1.SelectedPage = this.navigationSiparis;
-            this.navigationPane1.Size = new System.Drawing.Size(930, 332);
+            this.navigationPane1.Size = new System.Drawing.Size(936, 332);
             this.navigationPane1.TabIndex = 1;
+            // 
+            // radialMenu1
+            // 
+            this.radialMenu1.AutoExpand = true;
+            this.radialMenu1.Glyph = ((System.Drawing.Image)(resources.GetObject("radialMenu1.Glyph")));
+            this.radialMenu1.ItemAutoSize = DevExpress.XtraBars.Ribbon.RadialMenuItemAutoSize.Spring;
+            this.radialMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barFiyat1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barFiyat3),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barFiyat2)});
+            this.radialMenu1.Manager = this.barManager1;
+            this.radialMenu1.Name = "radialMenu1";
+            // 
+            // barFiyat1
+            // 
+            this.barFiyat1.Caption = "Fiyat1";
+            this.barFiyat1.CloseRadialMenuOnItemClick = true;
+            this.barFiyat1.Id = 0;
+            this.barFiyat1.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.bosaleitem_16x162;
+            this.barFiyat1.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.bosaleitem_32x322;
+            this.barFiyat1.Name = "barFiyat1";
+            this.barFiyat1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Fiyatlar);
+            // 
+            // barFiyat3
+            // 
+            this.barFiyat3.Caption = "Fiyat3";
+            this.barFiyat3.CloseRadialMenuOnItemClick = true;
+            this.barFiyat3.Id = 2;
+            this.barFiyat3.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.bosaleitem_16x16;
+            this.barFiyat3.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.bosaleitem_32x32;
+            this.barFiyat3.Name = "barFiyat3";
+            this.barFiyat3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Fiyatlar);
+            // 
+            // barFiyat2
+            // 
+            this.barFiyat2.Caption = "Fiyat2";
+            this.barFiyat2.CloseRadialMenuOnItemClick = true;
+            this.barFiyat2.Id = 1;
+            this.barFiyat2.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.bosaleitem_16x161;
+            this.barFiyat2.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.bosaleitem_32x321;
+            this.barFiyat2.Name = "barFiyat2";
+            this.barFiyat2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Fiyatlar);
+            // 
+            // barManager1
+            // 
+            this.barManager1.DockControls.Add(this.barDockControlTop);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barFiyat1,
+            this.barFiyat2,
+            this.barFiyat3});
+            this.barManager1.MaxItemId = 5;
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Manager = this.barManager1;
+            this.barDockControlTop.Size = new System.Drawing.Size(936, 0);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 529);
+            this.barDockControlBottom.Manager = this.barManager1;
+            this.barDockControlBottom.Size = new System.Drawing.Size(936, 0);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlLeft.Manager = this.barManager1;
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 529);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(936, 0);
+            this.barDockControlRight.Manager = this.barManager1;
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 529);
             // 
             // frmMasaSiparisleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 529);
+            this.ClientSize = new System.Drawing.Size(936, 529);
             this.Controls.Add(this.navigationPane1);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.lblBaslik);
             this.Controls.Add(this.groupControl1);
+            this.Controls.Add(this.barDockControlLeft);
+            this.Controls.Add(this.barDockControlRight);
+            this.Controls.Add(this.barDockControlBottom);
+            this.Controls.Add(this.barDockControlTop);
             this.Name = "frmMasaSiparisleri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Masa Siparisleri";
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+               ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
@@ -845,16 +983,20 @@ namespace CafeOto.WinForm.Masalar
             ((System.ComponentModel.ISupportInitialize)(this.gridControlSiparisler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewSiparis)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositorySipariSil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryFiyat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewOdeme)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditTarih.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditTarih.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpMusteri.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).EndInit();
             this.navigationPane1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radialMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -907,7 +1049,7 @@ namespace CafeOto.WinForm.Masalar
         private DevExpress.XtraBars.Navigation.NavigationPane navigationPane1;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.SimpleButton btnMusteriSil;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.DateEdit dateEditTarih;
         private DevExpress.XtraEditors.LookUpEdit lookUpMusteri;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.LabelControl labelControl8;
@@ -921,5 +1063,16 @@ namespace CafeOto.WinForm.Masalar
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryOdemeSil;
         private DevExpress.XtraGrid.Columns.GridColumn Urun;
         private DevExpress.XtraGrid.Columns.GridColumn colTutar;
+        private DevExpress.XtraBars.Ribbon.RadialMenu radialMenu1;
+        private DevExpress.XtraBars.BarButtonItem barFiyat1;
+        private DevExpress.XtraBars.BarButtonItem barFiyat2;
+        private DevExpress.XtraBars.BarButtonItem barFiyat3;
+        private DevExpress.XtraBars.BarManager barManager1;
+        private DevExpress.XtraBars.BarDockControl barDockControlTop;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryFiyat;
+        private DevExpress.XtraEditors.SimpleButton btnYazdir;
     }
 }

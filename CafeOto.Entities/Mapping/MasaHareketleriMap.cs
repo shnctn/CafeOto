@@ -14,7 +14,7 @@ namespace CafeOto.Entities.Mapping
             this.Property(p => p.SatisKodu).HasMaxLength(50).HasColumnType("varchar");
             this.Property(p => p.Aciklama).HasMaxLength(350).HasColumnType("varchar");
             this.Property(p => p.SonIslemTarih).HasColumnType("date");
-            this.HasRequired(x => x.Masalar).WithMany(x => x.MasaHareketleri).HasForeignKey(x => x.MasaId);
+            this.HasOptional(x => x.Masalar).WithMany(x => x.MasaHareketleri).HasForeignKey(x => x.MasaId);
             this.HasRequired(x => x.Urun).WithMany(x => x.MasaHareketleri).HasForeignKey(x => x.UrunId);
         }
     }

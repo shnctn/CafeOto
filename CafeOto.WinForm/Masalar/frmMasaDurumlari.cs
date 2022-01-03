@@ -15,7 +15,7 @@ namespace CafeOto.WinForm.Masalar
         string _satisKodu;
         int _masaId;
         Entities.Models.Masalar masalar;
-        Entities.DAL.MasalarDAL masalarDal=new Entities.DAL.MasalarDAL();
+        Entities.DAL.MasalarDAL masalarDal = new Entities.DAL.MasalarDAL();
 
         public FormMasaDurumlari()
         {
@@ -34,7 +34,7 @@ namespace CafeOto.WinForm.Masalar
         public void masalariGetir()
         {
             flowLayoutPanel1.Controls.Clear();
-            context=new CafeContext();
+            context = new CafeContext();
             var model = context.Masalar.ToList();
             for (int i = 0; i < model.Count; i++)
             {
@@ -45,7 +45,7 @@ namespace CafeOto.WinForm.Masalar
                 btn.Height = 100;
                 btn.Width = 80;
                 flowLayoutPanel1.Controls.Add(btn);
-                if (model[i].RezerveMi && !model[i].Durumu)
+                if (!model[i].RezerveMi && !model[i].Durumu)
                 {
                     btn.Appearance.BackColor = Color.Green;
                 }
@@ -60,12 +60,12 @@ namespace CafeOto.WinForm.Masalar
                 btn.Click += Btn_Click;
             }
         }
-         
+
         private void Btn_Click(object sender, EventArgs e)
         {
             btnsender = sender as CheckButton;
             _masaId = Convert.ToInt32(btnsender.Name);
-           
+
             DurumYenile();
             if (btnsender.Appearance.BackColor == Color.Yellow)
             {
@@ -90,38 +90,44 @@ namespace CafeOto.WinForm.Masalar
         private void btnSiparisEkle_Click(object sender, EventArgs e)
         {
             _satisKodu = btnsender.Tag.ToString();
-            frmMasaSiparisleri frm = new frmMasaSiparisleri(masaId: _masaId, masaAdi: btnsender.Text,satisKodu:_satisKodu);
+            frmMasaSiparisleri frm = new frmMasaSiparisleri(masaId: _masaId, masaAdi: btnsender.Text, satisKodu: _satisKodu);
             frm.ShowDialog();
-            btnsender=null;
+            btnsender = null;
             DurumYenile();
             masalariGetir();
         }
 
         private void btnMasaAc_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(btnsender.Text+"açılsın mı?","Bilgi",MessageBoxButtons.YesNo,MessageBoxIcon.Information)==DialogResult.Yes)
+            if (MessageBox.Show(btnsender.Text + " Açılsın Mı? ", " CAFE OTOMASYONU ", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
                 masalar = masalarDal.GetByFilter(context, m => m.Id == _masaId);
                 masalar.SatisKodu = modelSatisKodu.Tanim + modelSatisKodu.Sayi;
-                masalar.Durumu=true;
+                masalar.Durumu = true;
+                masalar.RezerveMi = false;
+                var sayiarttir = context.SatisKodu.First();
+                sayiarttir.Sayi++;
+
                 masalarDal.save(context);
-                modelSatisKodu.Sayi++;
-                btnsender=null;
+                btnsender = null; 
+                DurumYenile();
+                masalariGetir();
+                modelSatisKodu = context.SatisKodu.First();
             }
 
         }
 
         private void btnRezerve_Click(object sender, EventArgs e)
         {
-            frmMasaRezerv frm =new frmMasaRezerv(_masaId);
+            frmMasaRezerv frm = new frmMasaRezerv(_masaId);
             frm.ShowDialog();
             if (frm.islemyapildi)
             {
                 DurumYenile();
                 masalariGetir();
-               
+
             }
-            btnsender=null;
+            btnsender = null;
         }
     }
 }

@@ -8,7 +8,7 @@ namespace CafeOto.Entities.Models
     {
         public int Id { get; set; }
         public string SatisKodu { get; set; }
-        public int MasaId { get; set; }
+        public int? MasaId { get; set; }
         // public int MenuId { get; set; }
         public int UrunId { get; set; }
         public int Miktari { get; set; }

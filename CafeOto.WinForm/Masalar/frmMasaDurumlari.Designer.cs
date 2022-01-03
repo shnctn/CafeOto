@@ -69,7 +69,7 @@ namespace CafeOto.WinForm.Masalar
             // btnRezerve
             // 
             this.btnRezerve.Enabled = false;
-            this.btnRezerve.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.morefunctions_32x32;
+            this.btnRezerve.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.converttorange_32x321;
             this.btnRezerve.Location = new System.Drawing.Point(226, 26);
             this.btnRezerve.Name = "btnRezerve";
             this.btnRezerve.Size = new System.Drawing.Size(101, 48);

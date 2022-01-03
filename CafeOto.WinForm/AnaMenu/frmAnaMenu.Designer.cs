@@ -31,7 +31,6 @@ namespace CafeOto.WinForm.AnaMenu
         {
             this.components = new System.ComponentModel.Container();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.Tema = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.btnMasalar = new DevExpress.XtraBars.BarButtonItem();
             this.btnMasaHareketleri = new DevExpress.XtraBars.BarButtonItem();
             this.btnMenu = new DevExpress.XtraBars.BarButtonItem();
@@ -51,27 +50,32 @@ namespace CafeOto.WinForm.AnaMenu
             this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
             this.skinPaletteRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinPaletteRibbonGalleryBarItem();
             this.skinPaletteDropDownButtonItem1 = new DevExpress.XtraBars.SkinPaletteDropDownButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSatislar = new DevExpress.XtraBars.BarButtonItem();
+            this.btnOdemeHareketleri = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnMasaHareketleriRapor = new DevExpress.XtraBars.BarButtonItem();
             this.KAfa = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
             // 
-            this.ribbon.CaptionBarItemLinks.Add(this.Tema);
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.Tema,
             this.ribbon.ExpandCollapseItem,
             this.ribbon.SearchEditItem,
             this.btnMasalar,
@@ -93,21 +97,19 @@ namespace CafeOto.WinForm.AnaMenu
             this.skinDropDownButtonItem1,
             this.skinPaletteRibbonGalleryBarItem1,
             this.skinPaletteDropDownButtonItem1,
-            this.barButtonItem2});
+            this.barButtonItem2,
+            this.btnSatislar,
+            this.btnOdemeHareketleri,
+            this.barButtonItem3,
+            this.btnMasaHareketleriRapor});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 23;
+            this.ribbon.MaxItemId = 27;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.KAfa,
             this.ribbonPage1});
-            this.ribbon.Size = new System.Drawing.Size(1460, 158);
+            this.ribbon.Size = new System.Drawing.Size(1362, 158);
             this.ribbon.StatusBar = this.ribbonStatusBar;
-            // 
-            // Tema
-            // 
-            this.Tema.Caption = "skinRibbonGalleryBarItem2";
-            this.Tema.Id = 21;
-            this.Tema.Name = "Tema";
             // 
             // btnMasalar
             // 
@@ -124,6 +126,7 @@ namespace CafeOto.WinForm.AnaMenu
             this.btnMasaHareketleri.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.converttorange_16x16;
             this.btnMasaHareketleri.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.converttorange_32x32;
             this.btnMasaHareketleri.Name = "btnMasaHareketleri";
+            this.btnMasaHareketleri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMasaHareketleri_ItemClick);
             // 
             // btnMenu
             // 
@@ -251,6 +254,49 @@ namespace CafeOto.WinForm.AnaMenu
             this.skinPaletteDropDownButtonItem1.Id = 20;
             this.skinPaletteDropDownButtonItem1.Name = "skinPaletteDropDownButtonItem1";
             // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Müşteri İşlem";
+            this.barButtonItem2.Id = 22;
+            this.barButtonItem2.ImageOptions.SvgImage = global::CafeOto.WinForm.Properties.Resources.bo_department;
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
+            // btnSatislar
+            // 
+            this.btnSatislar.Caption = "Satişlar";
+            this.btnSatislar.Id = 23;
+            this.btnSatislar.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.iconsetarrows5_16x16;
+            this.btnSatislar.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.iconsetarrows5_32x32;
+            this.btnSatislar.Name = "btnSatislar";
+            this.btnSatislar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSatislar_ItemClick);
+            // 
+            // btnOdemeHareketleri
+            // 
+            this.btnOdemeHareketleri.Caption = "Ödeme Hareketleri";
+            this.btnOdemeHareketleri.Id = 24;
+            this.btnOdemeHareketleri.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.bosaleitem_16x164;
+            this.btnOdemeHareketleri.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.bosaleitem_32x324;
+            this.btnOdemeHareketleri.Name = "btnOdemeHareketleri";
+            this.btnOdemeHareketleri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnOdemeHareketleri_ItemClick);
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Paket Sipariş";
+            this.barButtonItem3.Id = 25;
+            this.barButtonItem3.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.boorderitem_16x16;
+            this.barButtonItem3.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.boorderitem_32x32;
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
+            // 
+            // btnMasaHareketleriRapor
+            // 
+            this.btnMasaHareketleriRapor.Caption = "Masa Hareketleri raporu";
+            this.btnMasaHareketleriRapor.Id = 26;
+            this.btnMasaHareketleriRapor.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.report2_16x16;
+            this.btnMasaHareketleriRapor.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.report2_32x32;
+            this.btnMasaHareketleriRapor.Name = "btnMasaHareketleriRapor";
+            this.btnMasaHareketleriRapor.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMasaHareketleriRapor_ItemClick);
+            // 
             // KAfa
             // 
             this.KAfa.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -258,7 +304,10 @@ namespace CafeOto.WinForm.AnaMenu
             this.ribbonPageGroup3,
             this.ribbonPageGroup4,
             this.ribbonPageGroup5,
-            this.ribbonPageGroup6});
+            this.ribbonPageGroup6,
+            this.ribbonPageGroup7,
+            this.ribbonPageGroup8,
+            this.ribbonPageGroup9});
             this.KAfa.Name = "KAfa";
             this.KAfa.Text = "Kafe İşlemleri";
             // 
@@ -299,6 +348,25 @@ namespace CafeOto.WinForm.AnaMenu
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "MÜŞTERİLER";
             // 
+            // ribbonPageGroup7
+            // 
+            this.ribbonPageGroup7.ItemLinks.Add(this.btnSatislar);
+            this.ribbonPageGroup7.ItemLinks.Add(this.btnOdemeHareketleri);
+            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            this.ribbonPageGroup7.Text = "Satışlar";
+            // 
+            // ribbonPageGroup8
+            // 
+            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            this.ribbonPageGroup8.Text = "Paket Sipariş";
+            // 
+            // ribbonPageGroup9
+            // 
+            this.ribbonPageGroup9.ItemLinks.Add(this.btnMasaHareketleriRapor);
+            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
+            this.ribbonPageGroup9.Text = "Raporlar";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -317,27 +385,20 @@ namespace CafeOto.WinForm.AnaMenu
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 747);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 648);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1460, 24);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1362, 24);
             // 
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "Müşteri İşlem";
-            this.barButtonItem2.Id = 22;
-            this.barButtonItem2.ImageOptions.SvgImage = global::CafeOto.WinForm.Properties.Resources.bo_department;
-            this.barButtonItem2.Name = "barButtonItem2";
-            // 
             // frmAnaMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1460, 771);
+            this.ClientSize = new System.Drawing.Size(1362, 672);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IconOptions.SvgImage = global::CafeOto.WinForm.Properties.Resources.redtoblack;
@@ -346,7 +407,7 @@ namespace CafeOto.WinForm.AnaMenu
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
-            this.Text = "KAFE OTOMASYONU";
+            this.Text = "Cafe Otomasyonu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
@@ -387,7 +448,13 @@ namespace CafeOto.WinForm.AnaMenu
         private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
         private DevExpress.XtraBars.SkinPaletteRibbonGalleryBarItem skinPaletteRibbonGalleryBarItem1;
         private DevExpress.XtraBars.SkinPaletteDropDownButtonItem skinPaletteDropDownButtonItem1;
-        private DevExpress.XtraBars.SkinRibbonGalleryBarItem Tema;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem btnSatislar;
+        private DevExpress.XtraBars.BarButtonItem btnOdemeHareketleri;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
+        private DevExpress.XtraBars.BarButtonItem btnMasaHareketleriRapor;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
     }
 }

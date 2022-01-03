@@ -18,12 +18,14 @@ namespace CafeOto.WinForm.Odemeler
          string _odemeTuru;
          public OdemeHareketleri odemeHareketleri;
         public bool Kaydedildi;
-        public frmOdeme(string odemeTuru,string satisKodu)
+        public decimal _kalan;
+        public frmOdeme(string odemeTuru,string satisKodu,decimal kalan)
         {
 
             InitializeComponent();
             _odemeTuru=odemeTuru;
             _satisKodu=satisKodu;
+            _kalan = kalan;
             if (_odemeTuru=="Nakit")
             {
                 lblBaslik.Text="Nakit ödeme";
@@ -53,6 +55,11 @@ namespace CafeOto.WinForm.Odemeler
         {
             this.Close();
            
+        }
+
+        private void btn_Click(object sender, EventArgs e)
+        {
+            calcOdenecek.Value = _kalan;
         }
     }
 }

@@ -16,6 +16,7 @@ namespace CafeOto.Entities.Models
         public string Aciklama { get; set; }
         public DateTime SonIslemTarih { get; set; }
         public virtual Musteriler Musteriler { get; set; }
+        public bool PaketSiparisMi { get; set; } = false;
 
     }
 }
