@@ -29,11 +29,12 @@ namespace CafeOto.WinForm.RaporDosyalari
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary2 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary3 = new DevExpress.XtraReports.UI.XRSummary();
-            DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.xrLabelİndirimliToplam = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelOdenen = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelOdenen1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelKalan1 = new DevExpress.XtraReports.UI.XRLabel();
@@ -68,7 +69,6 @@ namespace CafeOto.WinForm.RaporDosyalari
             this.xrTableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrLabelİndirimliToplam = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -93,8 +93,21 @@ namespace CafeOto.WinForm.RaporDosyalari
             this.xrLabelİndToplami,
             this.xrPageInfo3,
             this.xrPageInfo2});
-            this.BottomMargin.HeightF = 95.83334F;
+            this.BottomMargin.HeightF = 103.2083F;
             this.BottomMargin.Name = "BottomMargin";
+            // 
+            // xrLabelİndirimliToplam
+            // 
+            this.xrLabelİndirimliToplam.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([BirimFiyati]*[Miktari]-([IndirimTutari]))")});
+            this.xrLabelİndirimliToplam.LocationFloat = new DevExpress.Utils.PointFloat(251.3334F, 45.99999F);
+            this.xrLabelİndirimliToplam.Multiline = true;
+            this.xrLabelİndirimliToplam.Name = "xrLabelİndirimliToplam";
+            this.xrLabelİndirimliToplam.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabelİndirimliToplam.SizeF = new System.Drawing.SizeF(100F, 23F);
+            xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
+            this.xrLabelİndirimliToplam.Summary = xrSummary1;
+            this.xrLabelİndirimliToplam.TextFormatString = "{0:c2}";
             // 
             // xrLabelOdenen
             // 
@@ -139,7 +152,7 @@ namespace CafeOto.WinForm.RaporDosyalari
             this.xrLabelKalan.SizeF = new System.Drawing.SizeF(69.79993F, 23F);
             this.xrLabelKalan.StylePriority.UseFont = false;
             this.xrLabelKalan.StylePriority.UseTextAlignment = false;
-            this.xrLabelKalan.Text = "Kalan";
+            this.xrLabelKalan.Text = "Kalan:";
             this.xrLabelKalan.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel6
@@ -232,7 +245,8 @@ namespace CafeOto.WinForm.RaporDosyalari
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable1});
-            this.Detail.HeightF = 25.25004F;
+            this.Detail.HeightF = 27.3334F;
+            this.Detail.MultiColumn.Layout = DevExpress.XtraPrinting.ColumnLayout.AcrossThenDown;
             this.Detail.Name = "Detail";
             // 
             // xrTable1
@@ -375,7 +389,7 @@ namespace CafeOto.WinForm.RaporDosyalari
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable2});
-            this.PageHeader.HeightF = 25F;
+            this.PageHeader.HeightF = 25.50007F;
             this.PageHeader.Name = "PageHeader";
             // 
             // xrTable2
@@ -438,19 +452,6 @@ namespace CafeOto.WinForm.RaporDosyalari
             this.xrTableCell5.TextFormatString = "{0}";
             this.xrTableCell5.Weight = 0.82091614000494051D;
             // 
-            // xrLabelİndirimliToplam
-            // 
-            this.xrLabelİndirimliToplam.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([BirimFiyati]*[Miktari]-[İndirimTutari])")});
-            this.xrLabelİndirimliToplam.LocationFloat = new DevExpress.Utils.PointFloat(248.9998F, 45.99999F);
-            this.xrLabelİndirimliToplam.Multiline = true;
-            this.xrLabelİndirimliToplam.Name = "xrLabelİndirimliToplam";
-            this.xrLabelİndirimliToplam.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabelİndirimliToplam.SizeF = new System.Drawing.SizeF(100F, 23F);
-            xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
-            this.xrLabelİndirimliToplam.Summary = xrSummary1;
-            this.xrLabelİndirimliToplam.TextFormatString = "{0:c2}";
-            // 
             // rptSiparisFis
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -460,7 +461,7 @@ namespace CafeOto.WinForm.RaporDosyalari
             this.ReportHeader,
             this.PageHeader});
             this.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Margins = new System.Drawing.Printing.Margins(27, 33, 0, 96);
+            this.Margins = new System.Drawing.Printing.Margins(27, 33, 0, 103);
             this.PageHeight = 583;
             this.PageWidth = 413;
             this.PaperKind = System.Drawing.Printing.PaperKind.A6;
