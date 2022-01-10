@@ -35,10 +35,11 @@ namespace CafeOto.WinForm.Masalar
             this.btndurumdegistir = new DevExpress.XtraEditors.SimpleButton();
             this.btnRezerveDegistir = new DevExpress.XtraEditors.SimpleButton();
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
+            this.btnMasaHareketler = new DevExpress.XtraEditors.SimpleButton();
             this.btnYenile = new DevExpress.XtraEditors.SimpleButton();
             this.btnDuzenle = new DevExpress.XtraEditors.SimpleButton();
             this.btnYeniKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.btnMasaHareketleri = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMasaAdi = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -52,7 +53,7 @@ namespace CafeOto.WinForm.Masalar
             this.colMasaHareketleri = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMasaHareketleri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +67,7 @@ namespace CafeOto.WinForm.Masalar
             this.labelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelControl1.Location = new System.Drawing.Point(0, 0);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(840, 43);
+            this.labelControl1.Size = new System.Drawing.Size(1156, 43);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "MASALAR";
             // 
@@ -76,13 +77,14 @@ namespace CafeOto.WinForm.Masalar
             this.groupControl1.Controls.Add(this.btndurumdegistir);
             this.groupControl1.Controls.Add(this.btnRezerveDegistir);
             this.groupControl1.Controls.Add(this.btnSil);
+            this.groupControl1.Controls.Add(this.btnMasaHareketler);
             this.groupControl1.Controls.Add(this.btnYenile);
             this.groupControl1.Controls.Add(this.btnDuzenle);
             this.groupControl1.Controls.Add(this.btnYeniKaydet);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupControl1.Location = new System.Drawing.Point(0, 430);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(840, 79);
+            this.groupControl1.Size = new System.Drawing.Size(1156, 79);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "İşlemler";
             // 
@@ -90,7 +92,7 @@ namespace CafeOto.WinForm.Masalar
             // 
             this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKapat.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.close_32x32;
-            this.btnKapat.Location = new System.Drawing.Point(753, 26);
+            this.btnKapat.Location = new System.Drawing.Point(1069, 26);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(75, 48);
             this.btnKapat.TabIndex = 0;
@@ -101,7 +103,7 @@ namespace CafeOto.WinForm.Masalar
             // 
             this.btndurumdegistir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btndurumdegistir.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.refresh_32x321;
-            this.btndurumdegistir.Location = new System.Drawing.Point(412, 26);
+            this.btndurumdegistir.Location = new System.Drawing.Point(728, 26);
             this.btndurumdegistir.Name = "btndurumdegistir";
             this.btndurumdegistir.Size = new System.Drawing.Size(119, 48);
             this.btndurumdegistir.TabIndex = 0;
@@ -112,7 +114,7 @@ namespace CafeOto.WinForm.Masalar
             // 
             this.btnRezerveDegistir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRezerveDegistir.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.convert_32x32;
-            this.btnRezerveDegistir.Location = new System.Drawing.Point(537, 26);
+            this.btnRezerveDegistir.Location = new System.Drawing.Point(853, 26);
             this.btnRezerveDegistir.Name = "btnRezerveDegistir";
             this.btnRezerveDegistir.Size = new System.Drawing.Size(122, 48);
             this.btnRezerveDegistir.TabIndex = 0;
@@ -123,12 +125,22 @@ namespace CafeOto.WinForm.Masalar
             // 
             this.btnSil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSil.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.clearall_32x32;
-            this.btnSil.Location = new System.Drawing.Point(665, 26);
+            this.btnSil.Location = new System.Drawing.Point(981, 26);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(82, 48);
             this.btnSil.TabIndex = 0;
             this.btnSil.Text = "SİL";
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            // 
+            // btnMasaHareketler
+            // 
+            this.btnMasaHareketler.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.group_32x32;
+            this.btnMasaHareketler.Location = new System.Drawing.Point(326, 26);
+            this.btnMasaHareketler.Name = "btnMasaHareketler";
+            this.btnMasaHareketler.Size = new System.Drawing.Size(155, 48);
+            this.btnMasaHareketler.TabIndex = 0;
+            this.btnMasaHareketler.Text = "MASA HAREKETLER";
+            this.btnMasaHareketler.Click += new System.EventHandler(this.btnMasaHareketler_Click);
             // 
             // btnYenile
             // 
@@ -160,15 +172,15 @@ namespace CafeOto.WinForm.Masalar
             this.btnYeniKaydet.Text = "YENİ KAYIT";
             this.btnYeniKaydet.Click += new System.EventHandler(this.btnYeniKaydet_Click);
             // 
-            // gridControl1
+            // btnMasaHareketleri
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 43);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(840, 387);
-            this.gridControl1.TabIndex = 1;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.btnMasaHareketleri.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMasaHareketleri.Location = new System.Drawing.Point(0, 43);
+            this.btnMasaHareketleri.MainView = this.gridView1;
+            this.btnMasaHareketleri.Name = "btnMasaHareketleri";
+            this.btnMasaHareketleri.Size = new System.Drawing.Size(1156, 387);
+            this.btnMasaHareketleri.TabIndex = 1;
+            this.btnMasaHareketleri.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
@@ -185,7 +197,7 @@ namespace CafeOto.WinForm.Masalar
             this.colKullaniciId,
             this.colMasaHareketleri});
             this.gridView1.CustomizationFormBounds = new System.Drawing.Rectangle(832, 382, 252, 266);
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.btnMasaHareketleri;
             this.gridView1.Name = "gridView1";
             // 
             // colId
@@ -271,8 +283,8 @@ namespace CafeOto.WinForm.Masalar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(840, 509);
-            this.Controls.Add(this.gridControl1);
+            this.ClientSize = new System.Drawing.Size(1156, 509);
+            this.Controls.Add(this.btnMasaHareketleri);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.labelControl1);
             this.Name = "frmMasalar";
@@ -280,7 +292,7 @@ namespace CafeOto.WinForm.Masalar
             this.Text = "MASALAR";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMasaHareketleri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -295,7 +307,7 @@ namespace CafeOto.WinForm.Masalar
         private DevExpress.XtraEditors.SimpleButton btnYenile;
         private DevExpress.XtraEditors.SimpleButton btnDuzenle;
         private DevExpress.XtraEditors.SimpleButton btnYeniKaydet;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl btnMasaHareketleri;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
         private DevExpress.XtraGrid.Columns.GridColumn colMasaAdi;
@@ -309,5 +321,6 @@ namespace CafeOto.WinForm.Masalar
         private DevExpress.XtraGrid.Columns.GridColumn colAciklama;
         private DevExpress.XtraEditors.SimpleButton btndurumdegistir;
         private DevExpress.XtraEditors.SimpleButton btnRezerveDegistir;
+        private DevExpress.XtraEditors.SimpleButton btnMasaHareketler;
     }
 }

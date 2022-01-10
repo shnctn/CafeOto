@@ -19,7 +19,8 @@ namespace CafeOto.Entities.Models
         public string Cevap { get; set; }
         public string Aciklama { get; set; }
         public DateTime KayitTarihi { get; set; }
-        public bool AktifMi { get; set; }
+        public bool AktifMi { get; set; }=true;
+        public bool isAdmin { get; set; } = false;
         public virtual ICollection<KullaniciHareketleri> KullaniciHareketleri { get; set; }
         public virtual ICollection<Masalar> Masalar { get; set; }
 

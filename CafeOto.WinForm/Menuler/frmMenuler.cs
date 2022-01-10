@@ -2,6 +2,7 @@
 using System;
 using System.Data.Entity;
 using System.Windows.Forms;
+using CafeOto.WinForm.Masalar;
 
 namespace CafeOto.WinForm.Menuler
 {
@@ -34,6 +35,13 @@ namespace CafeOto.WinForm.Menuler
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnMasaHareketler_Click(object sender, EventArgs e)
+        {
+            int _menuid = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
+            frmMasaHaraketleri frm = new frmMasaHaraketleri(menuId: _menuid);
+            frm.ShowDialog();
         }
     }
 }

@@ -38,7 +38,6 @@ namespace CafeOto.WinForm.Urunler
             this.btnDuzenle = new DevExpress.XtraEditors.SimpleButton();
             this.btnYeniKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.urunBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMenuId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -53,10 +52,10 @@ namespace CafeOto.WinForm.Urunler
             this.colResim = new DevExpress.XtraGrid.Columns.GridColumn();
             this.menuadi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridSplitContainer1 = new DevExpress.XtraGrid.GridSplitContainer();
+            this.btnMasaHareketler = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.urunBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).BeginInit();
             this.gridSplitContainer1.SuspendLayout();
@@ -78,6 +77,7 @@ namespace CafeOto.WinForm.Urunler
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.btnMasaHareketler);
             this.groupControl1.Controls.Add(this.btnKapat);
             this.groupControl1.Controls.Add(this.btnSil);
             this.groupControl1.Controls.Add(this.btnYenile);
@@ -144,7 +144,6 @@ namespace CafeOto.WinForm.Urunler
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.urunBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
@@ -153,10 +152,6 @@ namespace CafeOto.WinForm.Urunler
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            // 
-            // urunBindingSource
-            // 
-            this.urunBindingSource.DataSource = typeof(CafeOto.Entities.Models.Urun);
             // 
             // gridView1
             // 
@@ -268,6 +263,16 @@ namespace CafeOto.WinForm.Urunler
             this.gridSplitContainer1.Size = new System.Drawing.Size(980, 419);
             this.gridSplitContainer1.TabIndex = 3;
             // 
+            // btnMasaHareketler
+            // 
+            this.btnMasaHareketler.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.group_32x32;
+            this.btnMasaHareketler.Location = new System.Drawing.Point(326, 26);
+            this.btnMasaHareketler.Name = "btnMasaHareketler";
+            this.btnMasaHareketler.Size = new System.Drawing.Size(151, 48);
+            this.btnMasaHareketler.TabIndex = 2;
+            this.btnMasaHareketler.Text = "MASA HAREKETLER";
+            this.btnMasaHareketler.Click += new System.EventHandler(this.btnMasaHareketler_Click);
+            // 
             // frnUrunler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -283,7 +288,6 @@ namespace CafeOto.WinForm.Urunler
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.urunBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).EndInit();
             this.gridSplitContainer1.ResumeLayout(false);
@@ -302,7 +306,6 @@ namespace CafeOto.WinForm.Urunler
         private DevExpress.XtraEditors.SimpleButton btnYenile;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private System.Windows.Forms.BindingSource urunBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
         private DevExpress.XtraGrid.Columns.GridColumn colMenuId;
         private DevExpress.XtraGrid.Columns.GridColumn colUrunKodu;
@@ -316,5 +319,6 @@ namespace CafeOto.WinForm.Urunler
         private DevExpress.XtraGrid.Columns.GridColumn colResim;
         private DevExpress.XtraGrid.Columns.GridColumn menuadi;
         private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer1;
+        private DevExpress.XtraEditors.SimpleButton btnMasaHareketler;
     }
 }

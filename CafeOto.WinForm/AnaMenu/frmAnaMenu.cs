@@ -76,7 +76,8 @@ namespace CafeOto.WinForm.AnaMenu
 
         private void btnMasaHareketleri_ItemClick(object sender, ItemClickEventArgs e)
         {
-           
+            frmMasaHaraketleri frm = new frmMasaHaraketleri();
+            frm.ShowDialog();
         }
 
         private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
@@ -97,6 +98,20 @@ namespace CafeOto.WinForm.AnaMenu
             rptMasaHareketleri rpt = new rptMasaHareketleri();
             frmMasaHareketleriRaporGor frm = new frmMasaHareketleriRaporGor(rpt);
             frm.ShowDialog();
+        }
+
+     
+
+        private void btnOzelRapor_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            frmOzelRaporOlustur frm = new frmOzelRaporOlustur();
+            frm.ShowDialog();
+        }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var frm = new frmDashport();
+            FormGetir(frm);
         }
     }
 }

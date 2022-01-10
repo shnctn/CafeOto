@@ -111,6 +111,26 @@ namespace CafeOto.WinForm.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap area3_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("area3_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap area3_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("area3_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
         /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage bo_appearance {
@@ -443,6 +463,26 @@ namespace CafeOto.WinForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap clusteredcylinder_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("clusteredcylinder_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clusteredcylinder_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("clusteredcylinder_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap convert_32x32 {
             get {
                 object obj = ResourceManager.GetObject("convert_32x32", resourceCulture);
@@ -593,9 +633,29 @@ namespace CafeOto.WinForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap formatastable_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("formatastable_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap formatastable_32x32 {
             get {
                 object obj = ResourceManager.GetObject("formatastable_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap formatastable_32x321 {
+            get {
+                object obj = ResourceManager.GetObject("formatastable_32x321", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -607,6 +667,16 @@ namespace CafeOto.WinForm.Properties {
             get {
                 object obj = ResourceManager.GetObject("fullextent", resourceCulture);
                 return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap group_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("group_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

@@ -42,6 +42,7 @@ namespace CafeOto.WinForm.Menuler
             this.colAdi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAciklama = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUrun = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnMasaHareketler = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -65,6 +66,7 @@ namespace CafeOto.WinForm.Menuler
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.btnMasaHareketler);
             this.groupControl1.Controls.Add(this.btnKapat);
             this.groupControl1.Controls.Add(this.btnSil);
             this.groupControl1.Controls.Add(this.btnKaydet);
@@ -162,6 +164,16 @@ namespace CafeOto.WinForm.Menuler
             this.colUrun.FieldName = "Urun";
             this.colUrun.Name = "colUrun";
             // 
+            // btnMasaHareketler
+            // 
+            this.btnMasaHareketler.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.group_32x32;
+            this.btnMasaHareketler.Location = new System.Drawing.Point(200, 26);
+            this.btnMasaHareketler.Name = "btnMasaHareketler";
+            this.btnMasaHareketler.Size = new System.Drawing.Size(150, 48);
+            this.btnMasaHareketler.TabIndex = 1;
+            this.btnMasaHareketler.Text = "MASA HAREKETLER";
+            this.btnMasaHareketler.Click += new System.EventHandler(this.btnMasaHareketler_Click);
+            // 
             // frmMenuler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,5 +210,6 @@ namespace CafeOto.WinForm.Menuler
         private DevExpress.XtraGrid.Columns.GridColumn colAdi;
         private DevExpress.XtraGrid.Columns.GridColumn colAciklama;
         private DevExpress.XtraGrid.Columns.GridColumn colUrun;
+        private DevExpress.XtraEditors.SimpleButton btnMasaHareketler;
     }
 }

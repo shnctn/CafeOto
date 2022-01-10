@@ -9,6 +9,7 @@ namespace CafeOto.WinForm.Masalar
     {
         private CafeContext context = new CafeContext();
         private MasalarDAL masalardal = new MasalarDAL();
+      
         public frmMasalar()
         {
             InitializeComponent();
@@ -17,7 +18,7 @@ namespace CafeOto.WinForm.Masalar
 
         private void listele()
         {
-            gridControl1.DataSource = masalardal.MasalariListele(context);
+            btnMasaHareketleri.DataSource = masalardal.MasalariListele(context);
         }
 
         private void btnYeniKaydet_Click(object sender, EventArgs e)
@@ -102,6 +103,13 @@ namespace CafeOto.WinForm.Masalar
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnMasaHareketler_Click(object sender, EventArgs e)
+        {
+            int _masaid = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
+            frmMasaHaraketleri frm = new frmMasaHaraketleri(masaId: _masaid);
+            frm.ShowDialog();
         }
     }
 }

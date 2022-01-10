@@ -55,6 +55,8 @@ namespace CafeOto.WinForm.AnaMenu
             this.btnOdemeHareketleri = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.btnMasaHareketleriRapor = new DevExpress.XtraBars.BarButtonItem();
+            this.btnOzelRapor = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.KAfa = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -67,9 +69,7 @@ namespace CafeOto.WinForm.AnaMenu
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -101,14 +101,16 @@ namespace CafeOto.WinForm.AnaMenu
             this.btnSatislar,
             this.btnOdemeHareketleri,
             this.barButtonItem3,
-            this.btnMasaHareketleriRapor});
+            this.btnMasaHareketleriRapor,
+            this.btnOzelRapor,
+            this.barButtonItem4});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 27;
+            this.ribbon.MaxItemId = 29;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.KAfa,
             this.ribbonPage1});
-            this.ribbon.Size = new System.Drawing.Size(1362, 158);
+            this.ribbon.Size = new System.Drawing.Size(1384, 158);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // btnMasalar
@@ -297,6 +299,24 @@ namespace CafeOto.WinForm.AnaMenu
             this.btnMasaHareketleriRapor.Name = "btnMasaHareketleriRapor";
             this.btnMasaHareketleriRapor.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMasaHareketleriRapor_ItemClick);
             // 
+            // btnOzelRapor
+            // 
+            this.btnOzelRapor.Caption = "Özel Rapor";
+            this.btnOzelRapor.Id = 27;
+            this.btnOzelRapor.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.formatastable_16x16;
+            this.btnOzelRapor.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.formatastable_32x321;
+            this.btnOzelRapor.Name = "btnOzelRapor";
+            this.btnOzelRapor.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnOzelRapor_ItemClick_1);
+            // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Caption = "DashPort";
+            this.barButtonItem4.Id = 28;
+            this.barButtonItem4.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.area3_16x16;
+            this.barButtonItem4.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.area3_32x32;
+            this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
+            // 
             // KAfa
             // 
             this.KAfa.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -364,6 +384,8 @@ namespace CafeOto.WinForm.AnaMenu
             // ribbonPageGroup9
             // 
             this.ribbonPageGroup9.ItemLinks.Add(this.btnMasaHareketleriRapor);
+            this.ribbonPageGroup9.ItemLinks.Add(this.btnOzelRapor);
+            this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem4);
             this.ribbonPageGroup9.Name = "ribbonPageGroup9";
             this.ribbonPageGroup9.Text = "Raporlar";
             // 
@@ -385,20 +407,16 @@ namespace CafeOto.WinForm.AnaMenu
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 648);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 664);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1362, 24);
-            // 
-            // xtraTabbedMdiManager1
-            // 
-            this.xtraTabbedMdiManager1.MdiParent = this;
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1384, 24);
             // 
             // frmAnaMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 672);
+            this.ClientSize = new System.Drawing.Size(1384, 688);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IconOptions.SvgImage = global::CafeOto.WinForm.Properties.Resources.redtoblack;
@@ -410,7 +428,6 @@ namespace CafeOto.WinForm.AnaMenu
             this.Text = "Cafe Otomasyonu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -439,7 +456,6 @@ namespace CafeOto.WinForm.AnaMenu
         private DevExpress.XtraBars.BarButtonItem btnDoviz;
         private DevExpress.XtraBars.BarButtonItem btnYardim;
         private DevExpress.XtraBars.BarButtonItem btnHakkimizda;
-        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem btnMasaSiparis;
         private DevExpress.XtraBars.BarButtonItem btnMusteriler;
@@ -456,5 +472,7 @@ namespace CafeOto.WinForm.AnaMenu
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private DevExpress.XtraBars.BarButtonItem btnMasaHareketleriRapor;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
+        private DevExpress.XtraBars.BarButtonItem btnOzelRapor;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
     }
 }

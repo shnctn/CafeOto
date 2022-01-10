@@ -2,6 +2,7 @@
 using CafeOto.Entities.Models;
 using System;
 using System.Windows.Forms;
+using CafeOto.WinForm.Masalar;
 
 namespace CafeOto.WinForm.Urunler
 {
@@ -67,6 +68,13 @@ namespace CafeOto.WinForm.Urunler
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnMasaHareketler_Click(object sender, EventArgs e)
+        {
+            int _urunid = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
+            frmMasaHaraketleri frm = new frmMasaHaraketleri(urunId: _urunid);
+            frm.ShowDialog();
         }
     }
 }
