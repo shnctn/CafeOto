@@ -31,14 +31,14 @@ namespace CafeOto.WinForm.Odemeler
         {
             this.lblBaslik = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.btnOnay = new DevExpress.XtraEditors.SimpleButton();
+            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.btn = new DevExpress.XtraEditors.SimpleButton();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.txtAciklama = new DevExpress.XtraEditors.MemoEdit();
-            this.btnOnay = new DevExpress.XtraEditors.SimpleButton();
-            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.calcOdenecek = new DevExpress.XtraEditors.CalcEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -57,7 +57,7 @@ namespace CafeOto.WinForm.Odemeler
             this.lblBaslik.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblBaslik.Location = new System.Drawing.Point(0, 0);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(289, 43);
+            this.lblBaslik.Size = new System.Drawing.Size(289, 25);
             this.lblBaslik.TabIndex = 9;
             this.lblBaslik.Text = "Ödemeler";
             // 
@@ -66,75 +66,11 @@ namespace CafeOto.WinForm.Odemeler
             this.groupControl1.Controls.Add(this.btnOnay);
             this.groupControl1.Controls.Add(this.btnKapat);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 203);
+            this.groupControl1.Location = new System.Drawing.Point(0, 184);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(289, 79);
             this.groupControl1.TabIndex = 10;
             this.groupControl1.Text = "İşlemler";
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(12, 49);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(81, 13);
-            this.labelControl6.TabIndex = 4;
-            this.labelControl6.Text = "Ödenecek Tutar:";
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Appearance.BorderColor = System.Drawing.Color.DimGray;
-            this.labelControl10.Appearance.Options.UseBorderColor = true;
-            this.labelControl10.Appearance.Options.UseTextOptions = true;
-            this.labelControl10.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl10.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl10.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl10.Location = new System.Drawing.Point(12, 77);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(81, 89);
-            this.labelControl10.TabIndex = 16;
-            this.labelControl10.Text = "Açıklama:";
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Appearance.BorderColor = System.Drawing.Color.DimGray;
-            this.labelControl9.Appearance.Options.UseBorderColor = true;
-            this.labelControl9.Appearance.Options.UseTextOptions = true;
-            this.labelControl9.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl9.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl9.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl9.Location = new System.Drawing.Point(15, 172);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(78, 23);
-            this.labelControl9.TabIndex = 18;
-            this.labelControl9.Text = "Tarih:";
-            // 
-            // btn
-            // 
-            this.btn.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.apply_16x16;
-            this.btn.Location = new System.Drawing.Point(253, 44);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(23, 23);
-            this.btn.TabIndex = 20;
-            this.btn.Click += new System.EventHandler(this.btn_Click);
-            // 
-            // dateEdit1
-            // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(99, 173);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(171, 20);
-            this.dateEdit1.TabIndex = 19;
-            // 
-            // txtAciklama
-            // 
-            this.txtAciklama.Location = new System.Drawing.Point(99, 76);
-            this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Size = new System.Drawing.Size(171, 89);
-            this.txtAciklama.TabIndex = 17;
             // 
             // btnOnay
             // 
@@ -158,9 +94,73 @@ namespace CafeOto.WinForm.Odemeler
             this.btnKapat.Text = "KAPAT";
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(12, 31);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(81, 13);
+            this.labelControl6.TabIndex = 4;
+            this.labelControl6.Text = "Ödenecek Tutar:";
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Appearance.BorderColor = System.Drawing.Color.DimGray;
+            this.labelControl10.Appearance.Options.UseBorderColor = true;
+            this.labelControl10.Appearance.Options.UseTextOptions = true;
+            this.labelControl10.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl10.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl10.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.labelControl10.Location = new System.Drawing.Point(12, 59);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(81, 89);
+            this.labelControl10.TabIndex = 16;
+            this.labelControl10.Text = "Açıklama:";
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.BorderColor = System.Drawing.Color.DimGray;
+            this.labelControl9.Appearance.Options.UseBorderColor = true;
+            this.labelControl9.Appearance.Options.UseTextOptions = true;
+            this.labelControl9.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl9.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl9.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.labelControl9.Location = new System.Drawing.Point(15, 154);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(78, 23);
+            this.labelControl9.TabIndex = 18;
+            this.labelControl9.Text = "Tarih:";
+            // 
+            // btn
+            // 
+            this.btn.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.apply_16x16;
+            this.btn.Location = new System.Drawing.Point(253, 26);
+            this.btn.Name = "btn";
+            this.btn.Size = new System.Drawing.Size(23, 23);
+            this.btn.TabIndex = 20;
+            this.btn.Click += new System.EventHandler(this.btn_Click);
+            // 
+            // dateEdit1
+            // 
+            this.dateEdit1.EditValue = null;
+            this.dateEdit1.Location = new System.Drawing.Point(99, 155);
+            this.dateEdit1.Name = "dateEdit1";
+            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Size = new System.Drawing.Size(171, 20);
+            this.dateEdit1.TabIndex = 19;
+            // 
+            // txtAciklama
+            // 
+            this.txtAciklama.Location = new System.Drawing.Point(99, 58);
+            this.txtAciklama.Name = "txtAciklama";
+            this.txtAciklama.Size = new System.Drawing.Size(171, 89);
+            this.txtAciklama.TabIndex = 17;
+            // 
             // calcOdenecek
             // 
-            this.calcOdenecek.Location = new System.Drawing.Point(99, 46);
+            this.calcOdenecek.Location = new System.Drawing.Point(99, 28);
             this.calcOdenecek.Name = "calcOdenecek";
             this.calcOdenecek.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.calcOdenecek.Properties.Appearance.Options.UseBackColor = true;
@@ -179,7 +179,7 @@ namespace CafeOto.WinForm.Odemeler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(289, 282);
+            this.ClientSize = new System.Drawing.Size(289, 263);
             this.Controls.Add(this.btn);
             this.Controls.Add(this.dateEdit1);
             this.Controls.Add(this.labelControl9);

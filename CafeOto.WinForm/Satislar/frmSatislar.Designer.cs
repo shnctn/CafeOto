@@ -33,6 +33,15 @@ namespace CafeOto.WinForm.Satıslar
             this.lblBaslik = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnExport = new DevExpress.XtraEditors.DropDownButton();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.btnExcelExport = new DevExpress.XtraBars.BarButtonItem();
+            this.btnWordExport = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPdf = new DevExpress.XtraBars.BarButtonItem();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.btnYenile = new DevExpress.XtraEditors.SimpleButton();
             this.btnOdemeHareketleri = new DevExpress.XtraEditors.SimpleButton();
@@ -52,22 +61,13 @@ namespace CafeOto.WinForm.Satıslar
             this.colSonIslemTarih = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMusteriler = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPaketsiparisMi = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.btnExcelExport = new DevExpress.XtraBars.BarButtonItem();
-            this.btnWordExport = new DevExpress.XtraBars.BarButtonItem();
-            this.btnPdf = new DevExpress.XtraBars.BarButtonItem();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.satislarBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBaslik
@@ -80,7 +80,7 @@ namespace CafeOto.WinForm.Satıslar
             this.lblBaslik.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblBaslik.Location = new System.Drawing.Point(0, 0);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(1274, 43);
+            this.lblBaslik.Size = new System.Drawing.Size(1274, 26);
             this.lblBaslik.TabIndex = 9;
             this.lblBaslik.Text = "Satışlar";
             // 
@@ -108,6 +108,90 @@ namespace CafeOto.WinForm.Satıslar
             this.btnExport.Size = new System.Drawing.Size(109, 48);
             this.btnExport.TabIndex = 1;
             this.btnExport.Text = "Export";
+            // 
+            // popupMenu1
+            // 
+            this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnExcelExport),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnWordExport),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnPdf)});
+            this.popupMenu1.Manager = this.barManager1;
+            this.popupMenu1.Name = "popupMenu1";
+            // 
+            // btnExcelExport
+            // 
+            this.btnExcelExport.Caption = "Excel Dosyalar(*.xlsx)";
+            this.btnExcelExport.Id = 0;
+            this.btnExcelExport.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.exporttoxlsx_16x16;
+            this.btnExcelExport.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.exporttoxlsx_32x32;
+            this.btnExcelExport.Name = "btnExcelExport";
+            this.btnExcelExport.Tag = "Excel Dosyalar(*.xlsx)|*.xlsx";
+            this.btnExcelExport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Export_ItemClick);
+            // 
+            // btnWordExport
+            // 
+            this.btnWordExport.Caption = "Word Dosyaları(* .Docx)";
+            this.btnWordExport.Id = 1;
+            this.btnWordExport.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.exporttodoc_16x16;
+            this.btnWordExport.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.exporttodoc_32x32;
+            this.btnWordExport.Name = "btnWordExport";
+            this.btnWordExport.Tag = "Word Dosyaları(* .Docx)|*.docx";
+            this.btnWordExport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Export_ItemClick);
+            // 
+            // btnPdf
+            // 
+            this.btnPdf.Caption = "Pdf Dosyaları(* .pdf)";
+            this.btnPdf.Id = 2;
+            this.btnPdf.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.exporttopdf_16x16;
+            this.btnPdf.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.exporttopdf_32x32;
+            this.btnPdf.Name = "btnPdf";
+            this.btnPdf.Tag = "Pdf Dosyaları(* .pdf)|*.pdf";
+            this.btnPdf.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Export_ItemClick);
+            // 
+            // barManager1
+            // 
+            this.barManager1.DockControls.Add(this.barDockControlTop);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.btnExcelExport,
+            this.btnWordExport,
+            this.btnPdf});
+            this.barManager1.MaxItemId = 3;
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Manager = this.barManager1;
+            this.barDockControlTop.Size = new System.Drawing.Size(1274, 0);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 615);
+            this.barDockControlBottom.Manager = this.barManager1;
+            this.barDockControlBottom.Size = new System.Drawing.Size(1274, 0);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlLeft.Manager = this.barManager1;
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 615);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(1274, 0);
+            this.barDockControlRight.Manager = this.barManager1;
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 615);
             // 
             // btnKapat
             // 
@@ -154,10 +238,10 @@ namespace CafeOto.WinForm.Satıslar
             // 
             this.gridControl1.DataSource = this.satislarBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 43);
+            this.gridControl1.Location = new System.Drawing.Point(0, 26);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1274, 493);
+            this.gridControl1.Size = new System.Drawing.Size(1274, 510);
             this.gridControl1.TabIndex = 11;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -296,90 +380,6 @@ namespace CafeOto.WinForm.Satıslar
             this.colPaketsiparisMi.Visible = true;
             this.colPaketsiparisMi.VisibleIndex = 9;
             // 
-            // popupMenu1
-            // 
-            this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnExcelExport),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnWordExport),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnPdf)});
-            this.popupMenu1.Manager = this.barManager1;
-            this.popupMenu1.Name = "popupMenu1";
-            // 
-            // btnExcelExport
-            // 
-            this.btnExcelExport.Caption = "Excel Dosyalar(*.xlsx)";
-            this.btnExcelExport.Id = 0;
-            this.btnExcelExport.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.exporttoxlsx_16x16;
-            this.btnExcelExport.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.exporttoxlsx_32x32;
-            this.btnExcelExport.Name = "btnExcelExport";
-            this.btnExcelExport.Tag = "Excel Dosyalar(*.xlsx)|*.xlsx";
-            this.btnExcelExport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Export_ItemClick);
-            // 
-            // btnWordExport
-            // 
-            this.btnWordExport.Caption = "Word Dosyaları(* .Docx)";
-            this.btnWordExport.Id = 1;
-            this.btnWordExport.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.exporttodoc_16x16;
-            this.btnWordExport.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.exporttodoc_32x32;
-            this.btnWordExport.Name = "btnWordExport";
-            this.btnWordExport.Tag = "Word Dosyaları(* .Docx)|*.docx";
-            this.btnWordExport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Export_ItemClick);
-            // 
-            // btnPdf
-            // 
-            this.btnPdf.Caption = "Pdf Dosyaları(* .pdf)";
-            this.btnPdf.Id = 2;
-            this.btnPdf.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.exporttopdf_16x16;
-            this.btnPdf.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.exporttopdf_32x32;
-            this.btnPdf.Name = "btnPdf";
-            this.btnPdf.Tag = "Pdf Dosyaları(* .pdf)|*.pdf";
-            this.btnPdf.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Export_ItemClick);
-            // 
-            // barManager1
-            // 
-            this.barManager1.DockControls.Add(this.barDockControlTop);
-            this.barManager1.DockControls.Add(this.barDockControlBottom);
-            this.barManager1.DockControls.Add(this.barDockControlLeft);
-            this.barManager1.DockControls.Add(this.barDockControlRight);
-            this.barManager1.Form = this;
-            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.btnExcelExport,
-            this.btnWordExport,
-            this.btnPdf});
-            this.barManager1.MaxItemId = 3;
-            // 
-            // barDockControlTop
-            // 
-            this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1274, 0);
-            // 
-            // barDockControlBottom
-            // 
-            this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 615);
-            this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1274, 0);
-            // 
-            // barDockControlLeft
-            // 
-            this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 615);
-            // 
-            // barDockControlRight
-            // 
-            this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1274, 0);
-            this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 615);
-            // 
             // frmSatislar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -397,11 +397,11 @@ namespace CafeOto.WinForm.Satıslar
             this.Text = "Satişlar";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.satislarBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

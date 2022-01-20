@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using CafeOto.Entities.Models;
 using CafeOto.WinForm.Kullanicilar;
@@ -8,6 +9,7 @@ using CafeOto.WinForm.Musteriler;
 using CafeOto.WinForm.Odemeler;
 using CafeOto.WinForm.RaporDosyalari;
 using CafeOto.WinForm.RaporFormlari;
+using CafeOto.WinForm.Roles;
 using CafeOto.WinForm.Satıslar;
 using CafeOto.WinForm.Urunler;
 using DevExpress.XtraBars;
@@ -26,8 +28,52 @@ namespace CafeOto.WinForm.AnaMenu
         public frmAnaMenu()
         {
             InitializeComponent();
+
+            if (!context.Kullanicilar.Any(k => k.KullaniciAdi == "admin"))
+            {
+
+                Entities.Models.Kullanicilar kullanici = new Entities.Models.Kullanicilar
+                {
+                    AdSoyad = "deneme ad soyad",
+                    Telefon = "55555",
+                    Adres = "123sdvdf asef",
+                    Email = "deneme@mail.com",
+                    KullaniciAdi = "admin",
+                    Parola = "12345",
+                    HatirlatmaSorusu = "1",
+                    Cevap = "1",
+                    KayitTarihi = DateTime.Now,
+                    isAdmin = true
+                };
+                context.Kullanicilar.Add(kullanici);
+                context.SaveChanges();
+                foreach (var item in ribbon.Items)
+                {
+                    if (item is BarButtonItem)
+                    {
+                        var btn = item as BarButtonItem;
+                        if (btn.Caption!="")
+                        {
+                            Roller roll = new Roller
+                            {
+                                KullaniciId = 1,
+                                FormName = "frmAnaMenu",
+                                ControlCaption = btn.Caption,
+                                ControlName = btn.Name,
+                                Visible = true
+
+                            };
+                            context.Roller.Add(roll);
+                            context.SaveChanges();
+                        }
+                    }
+                }
+
+            }
+
             XtraForm frm = new frmKullaniciGiris();
             frm.ShowDialog();
+            KullaniciYetki.YetkileriGetir(context,ribbon);
         }
 
         private void btnUrunler_ItemClick(object sender, ItemClickEventArgs e)
@@ -112,6 +158,11 @@ namespace CafeOto.WinForm.AnaMenu
         {
             var frm = new frmDashport();
             FormGetir(frm);
+        }
+
+        private void btnMenuHareketleri_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
         }
     }
 }

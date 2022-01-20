@@ -25,8 +25,8 @@ namespace CafeOto.Entities.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.Add(new MenuMap());
             modelBuilder.Configurations.Add(new UrunMap());
+            modelBuilder.Configurations.Add(new MenuMap());
             modelBuilder.Configurations.Add(new MasalarMap());
             modelBuilder.Configurations.Add(new MasaHareketleriMap());
             modelBuilder.Configurations.Add(new RollerMap());

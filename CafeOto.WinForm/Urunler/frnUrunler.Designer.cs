@@ -29,9 +29,9 @@ namespace CafeOto.WinForm.Urunler
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.btnMasaHareketler = new DevExpress.XtraEditors.SimpleButton();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.btnYenile = new DevExpress.XtraEditors.SimpleButton();
@@ -52,7 +52,6 @@ namespace CafeOto.WinForm.Urunler
             this.colResim = new DevExpress.XtraGrid.Columns.GridColumn();
             this.menuadi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridSplitContainer1 = new DevExpress.XtraGrid.GridSplitContainer();
-            this.btnMasaHareketler = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -71,9 +70,9 @@ namespace CafeOto.WinForm.Urunler
             this.labelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelControl1.Location = new System.Drawing.Point(0, 0);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(980, 43);
+            this.labelControl1.Size = new System.Drawing.Size(980, 27);
             this.labelControl1.TabIndex = 1;
-            this.labelControl1.Text = "URUNLER";
+            this.labelControl1.Text = "Ürünler";
             // 
             // groupControl1
             // 
@@ -89,6 +88,16 @@ namespace CafeOto.WinForm.Urunler
             this.groupControl1.Size = new System.Drawing.Size(980, 79);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "İşlemler";
+            // 
+            // btnMasaHareketler
+            // 
+            this.btnMasaHareketler.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.group_32x32;
+            this.btnMasaHareketler.Location = new System.Drawing.Point(326, 26);
+            this.btnMasaHareketler.Name = "btnMasaHareketler";
+            this.btnMasaHareketler.Size = new System.Drawing.Size(151, 48);
+            this.btnMasaHareketler.TabIndex = 2;
+            this.btnMasaHareketler.Text = "MASA HAREKETLER";
+            this.btnMasaHareketler.Click += new System.EventHandler(this.btnMasaHareketler_Click);
             // 
             // btnKapat
             // 
@@ -148,7 +157,7 @@ namespace CafeOto.WinForm.Urunler
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(980, 419);
+            this.gridControl1.Size = new System.Drawing.Size(980, 435);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -257,21 +266,11 @@ namespace CafeOto.WinForm.Urunler
             // 
             this.gridSplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSplitContainer1.Grid = this.gridControl1;
-            this.gridSplitContainer1.Location = new System.Drawing.Point(0, 43);
+            this.gridSplitContainer1.Location = new System.Drawing.Point(0, 27);
             this.gridSplitContainer1.Name = "gridSplitContainer1";
             this.gridSplitContainer1.Panel1.Controls.Add(this.gridControl1);
-            this.gridSplitContainer1.Size = new System.Drawing.Size(980, 419);
+            this.gridSplitContainer1.Size = new System.Drawing.Size(980, 435);
             this.gridSplitContainer1.TabIndex = 3;
-            // 
-            // btnMasaHareketler
-            // 
-            this.btnMasaHareketler.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.group_32x32;
-            this.btnMasaHareketler.Location = new System.Drawing.Point(326, 26);
-            this.btnMasaHareketler.Name = "btnMasaHareketler";
-            this.btnMasaHareketler.Size = new System.Drawing.Size(151, 48);
-            this.btnMasaHareketler.TabIndex = 2;
-            this.btnMasaHareketler.Text = "MASA HAREKETLER";
-            this.btnMasaHareketler.Click += new System.EventHandler(this.btnMasaHareketler_Click);
             // 
             // frnUrunler
             // 

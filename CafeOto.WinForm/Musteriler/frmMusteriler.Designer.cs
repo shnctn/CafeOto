@@ -63,7 +63,7 @@ namespace CafeOto.WinForm.Musteriler
             this.labelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelControl1.Location = new System.Drawing.Point(0, 0);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(1026, 28);
+            this.labelControl1.Size = new System.Drawing.Size(1026, 22);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "Müşteriler";
             // 
@@ -114,10 +114,10 @@ namespace CafeOto.WinForm.Musteriler
             // 
             this.gridControl1.DataSource = this.musterilerBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 28);
+            this.gridControl1.Location = new System.Drawing.Point(0, 22);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1026, 288);
+            this.gridControl1.Size = new System.Drawing.Size(1026, 294);
             this.gridControl1.TabIndex = 3;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});

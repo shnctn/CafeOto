@@ -110,7 +110,7 @@ namespace CafeOto.WinForm.AnaMenu
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.KAfa,
             this.ribbonPage1});
-            this.ribbon.Size = new System.Drawing.Size(1384, 158);
+            this.ribbon.Size = new System.Drawing.Size(1488, 158);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // btnMasalar
@@ -144,6 +144,7 @@ namespace CafeOto.WinForm.AnaMenu
             this.btnMenuHareketleri.Id = 4;
             this.btnMenuHareketleri.ImageOptions.SvgImage = global::CafeOto.WinForm.Properties.Resources.fullextent;
             this.btnMenuHareketleri.Name = "btnMenuHareketleri";
+            this.btnMenuHareketleri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMenuHareketleri_ItemClick);
             // 
             // btnUrunler
             // 
@@ -407,16 +408,16 @@ namespace CafeOto.WinForm.AnaMenu
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 664);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 657);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1384, 24);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1488, 24);
             // 
             // frmAnaMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1384, 688);
+            this.ClientSize = new System.Drawing.Size(1488, 681);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IconOptions.SvgImage = global::CafeOto.WinForm.Properties.Resources.redtoblack;

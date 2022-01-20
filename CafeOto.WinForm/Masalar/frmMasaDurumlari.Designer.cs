@@ -111,9 +111,9 @@ namespace CafeOto.WinForm.Masalar
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 43);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 37);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(920, 339);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(920, 345);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // labelControl1
@@ -126,7 +126,7 @@ namespace CafeOto.WinForm.Masalar
             this.labelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelControl1.Location = new System.Drawing.Point(0, 0);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(920, 43);
+            this.labelControl1.Size = new System.Drawing.Size(920, 37);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "Masa Durumları";
             // 

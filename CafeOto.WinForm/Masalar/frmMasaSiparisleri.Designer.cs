@@ -293,7 +293,7 @@ namespace CafeOto.WinForm.Masalar
             this.lblBaslik.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblBaslik.Location = new System.Drawing.Point(0, 0);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(936, 43);
+            this.lblBaslik.Size = new System.Drawing.Size(936, 26);
             this.lblBaslik.TabIndex = 8;
             this.lblBaslik.Text = "Masa Siparişleri";
             // 
@@ -558,7 +558,7 @@ namespace CafeOto.WinForm.Masalar
             this.navigationSiparis.Controls.Add(this.panelControl2);
             this.navigationSiparis.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.formatastable_32x32;
             this.navigationSiparis.Name = "navigationSiparis";
-            this.navigationSiparis.Size = new System.Drawing.Size(849, 268);
+            this.navigationSiparis.Size = new System.Drawing.Size(849, 285);
             // 
             // gridControlSiparisler
             // 
@@ -569,7 +569,7 @@ namespace CafeOto.WinForm.Masalar
             this.gridControlSiparisler.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositorySipariSil,
             this.repositoryFiyat});
-            this.gridControlSiparisler.Size = new System.Drawing.Size(849, 183);
+            this.gridControlSiparisler.Size = new System.Drawing.Size(849, 200);
             this.gridControlSiparisler.TabIndex = 0;
             this.gridControlSiparisler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSiparis,
@@ -846,16 +846,16 @@ namespace CafeOto.WinForm.Masalar
             this.navigationPane1.Controls.Add(this.navigationSiparis);
             this.navigationPane1.Controls.Add(this.navigationOdemeler);
             this.navigationPane1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationPane1.Location = new System.Drawing.Point(0, 43);
+            this.navigationPane1.Location = new System.Drawing.Point(0, 26);
             this.navigationPane1.Name = "navigationPane1";
             this.navigationPane1.PageProperties.ShowCollapseButton = false;
             this.navigationPane1.PageProperties.ShowExpandButton = false;
             this.navigationPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.navigationSiparis,
             this.navigationOdemeler});
-            this.navigationPane1.RegularSize = new System.Drawing.Size(936, 332);
+            this.navigationPane1.RegularSize = new System.Drawing.Size(936, 349);
             this.navigationPane1.SelectedPage = this.navigationSiparis;
-            this.navigationPane1.Size = new System.Drawing.Size(936, 332);
+            this.navigationPane1.Size = new System.Drawing.Size(936, 349);
             this.navigationPane1.TabIndex = 1;
             // 
             // radialMenu1
@@ -961,7 +961,7 @@ namespace CafeOto.WinForm.Masalar
             this.Name = "frmMasaSiparisleri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Masa Siparisleri";
-               ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);

@@ -9,5 +9,6 @@ namespace CafeOto.Entities.Models
         public string FormName { get; set; }
         public string ControlName { get; set; }
         public string ControlCaption { get; set; }
+        public bool Visible { get; set; }
     }
 }

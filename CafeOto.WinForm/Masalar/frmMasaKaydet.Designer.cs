@@ -85,7 +85,7 @@ namespace CafeOto.WinForm.Masalar
             this.labelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelControl1.Location = new System.Drawing.Point(0, 0);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(353, 43);
+            this.labelControl1.Size = new System.Drawing.Size(353, 31);
             this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Masa Kayıt";
             // 

@@ -8,8 +8,8 @@ namespace CafeOto.Entities.Validations
         public KullanicilarValidator()
         {
             RuleFor(p => p.AdSoyad).NotEmpty().WithMessage("Ad soyad alanı boş geçilemez");
-            RuleFor(p => p.KullaniciAdi).NotEmpty().WithMessage("KUllanıcı adı alanı boş geçilemez").MaximumLength(30).WithMessage("En fazl 20 karakter olmalı").MinimumLength(5).WithMessage("KullanıcıAdı alan 5karakterden az olmamalı");
-            RuleFor(p => p.Parola).NotEmpty().WithMessage("Parola alanı boş geçilemez").MaximumLength(30).WithMessage("En fazla 20 karakter olmalı").MinimumLength(5).WithMessage(" Parola alan 5karakterden az 6 olmamalı");
+            RuleFor(p => p.KullaniciAdi).NotEmpty().WithMessage("KUllanıcı adı alanı boş geçilemez").MaximumLength(30).WithMessage("En fazl 20 karakter olmalı").MinimumLength(3).WithMessage("KullanıcıAdı alan 5karakterden az olmamalı");
+            RuleFor(p => p.Parola).NotEmpty().WithMessage("Parola alanı boş geçilemez").MaximumLength(30).WithMessage("En fazla 20 karakter olmalı").MinimumLength(2).WithMessage(" Parola alan 2 karakterden az olmamalı");
             RuleFor(p => p.Email).NotEmpty().WithMessage("E-mail alanı boş geçilemez");
             RuleFor(p => p.Telefon).NotEmpty().WithMessage("Telefon alanı boş geçilemez");
             RuleFor(p => p.Email).EmailAddress().WithMessage("Hatalı Email Adresi");

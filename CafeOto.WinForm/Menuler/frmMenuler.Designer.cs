@@ -32,6 +32,7 @@ namespace CafeOto.WinForm.Menuler
             this.components = new System.ComponentModel.Container();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.btnMasaHareketler = new DevExpress.XtraEditors.SimpleButton();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
@@ -42,7 +43,6 @@ namespace CafeOto.WinForm.Menuler
             this.colAdi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAciklama = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUrun = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnMasaHareketler = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -60,9 +60,9 @@ namespace CafeOto.WinForm.Menuler
             this.labelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelControl1.Location = new System.Drawing.Point(0, 0);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(632, 43);
+            this.labelControl1.Size = new System.Drawing.Size(632, 28);
             this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "MENULER";
+            this.labelControl1.Text = "Menüler";
             // 
             // groupControl1
             // 
@@ -76,6 +76,16 @@ namespace CafeOto.WinForm.Menuler
             this.groupControl1.Size = new System.Drawing.Size(632, 79);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "İşlemler";
+            // 
+            // btnMasaHareketler
+            // 
+            this.btnMasaHareketler.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.group_32x32;
+            this.btnMasaHareketler.Location = new System.Drawing.Point(200, 26);
+            this.btnMasaHareketler.Name = "btnMasaHareketler";
+            this.btnMasaHareketler.Size = new System.Drawing.Size(150, 48);
+            this.btnMasaHareketler.TabIndex = 1;
+            this.btnMasaHareketler.Text = "MASA HAREKETLER";
+            this.btnMasaHareketler.Click += new System.EventHandler(this.btnMasaHareketler_Click);
             // 
             // btnKapat
             // 
@@ -112,10 +122,10 @@ namespace CafeOto.WinForm.Menuler
             // 
             this.gridControl1.DataSource = this.menuBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 43);
+            this.gridControl1.Location = new System.Drawing.Point(0, 28);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(632, 316);
+            this.gridControl1.Size = new System.Drawing.Size(632, 331);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -163,16 +173,6 @@ namespace CafeOto.WinForm.Menuler
             // 
             this.colUrun.FieldName = "Urun";
             this.colUrun.Name = "colUrun";
-            // 
-            // btnMasaHareketler
-            // 
-            this.btnMasaHareketler.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.group_32x32;
-            this.btnMasaHareketler.Location = new System.Drawing.Point(200, 26);
-            this.btnMasaHareketler.Name = "btnMasaHareketler";
-            this.btnMasaHareketler.Size = new System.Drawing.Size(150, 48);
-            this.btnMasaHareketler.TabIndex = 1;
-            this.btnMasaHareketler.Text = "MASA HAREKETLER";
-            this.btnMasaHareketler.Click += new System.EventHandler(this.btnMasaHareketler_Click);
             // 
             // frmMenuler
             // 

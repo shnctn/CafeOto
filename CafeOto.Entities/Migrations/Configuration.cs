@@ -8,6 +8,7 @@
         {
             AutomaticMigrationsEnabled = true;
             AutomaticMigrationDataLossAllowed = true;
+
         }
 
         protected override void Seed(CafeOto.Entities.Models.CafeContext context)

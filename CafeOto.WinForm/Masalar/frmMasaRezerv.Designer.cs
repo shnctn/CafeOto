@@ -54,7 +54,7 @@ namespace CafeOto.WinForm.Masalar
             this.lblBaslik.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblBaslik.Location = new System.Drawing.Point(0, 0);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(414, 43);
+            this.lblBaslik.Size = new System.Drawing.Size(414, 31);
             this.lblBaslik.TabIndex = 9;
             this.lblBaslik.Text = "Masa Rezerv";
             // 

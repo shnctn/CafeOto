@@ -35,7 +35,6 @@ namespace CafeOto.WinForm.Odemeler
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.btnYenile = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.odemeHareketleriBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSatisKodu = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -46,7 +45,6 @@ namespace CafeOto.WinForm.Odemeler
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.odemeHareketleriBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +58,7 @@ namespace CafeOto.WinForm.Odemeler
             this.lblBaslik.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblBaslik.Location = new System.Drawing.Point(0, 0);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(781, 43);
+            this.lblBaslik.Size = new System.Drawing.Size(781, 37);
             this.lblBaslik.TabIndex = 10;
             this.lblBaslik.Text = "Ödeme Hareketleri";
             // 
@@ -98,19 +96,14 @@ namespace CafeOto.WinForm.Odemeler
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.odemeHareketleriBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 43);
+            this.gridControl1.Location = new System.Drawing.Point(0, 37);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(781, 338);
+            this.gridControl1.Size = new System.Drawing.Size(781, 344);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            // 
-            // odemeHareketleriBindingSource
-            // 
-            this.odemeHareketleriBindingSource.DataSource = typeof(CafeOto.Entities.Models.OdemeHareketleri);
             // 
             // gridView1
             // 
@@ -192,7 +185,6 @@ namespace CafeOto.WinForm.Odemeler
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.odemeHareketleriBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -205,7 +197,6 @@ namespace CafeOto.WinForm.Odemeler
         private DevExpress.XtraEditors.SimpleButton btnKapat;
         private DevExpress.XtraEditors.SimpleButton btnYenile;
         private DevExpress.XtraGrid.GridControl gridControl1;
-        private System.Windows.Forms.BindingSource odemeHareketleriBindingSource;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
         private DevExpress.XtraGrid.Columns.GridColumn colSatisKodu;

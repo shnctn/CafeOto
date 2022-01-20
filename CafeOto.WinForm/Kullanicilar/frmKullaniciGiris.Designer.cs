@@ -58,7 +58,7 @@ namespace CafeOto.WinForm.Kullanicilar
             this.labelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelControl1.Location = new System.Drawing.Point(0, 0);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(418, 43);
+            this.labelControl1.Size = new System.Drawing.Size(418, 37);
             this.labelControl1.TabIndex = 5;
             this.labelControl1.Text = "Kullanıcı Giriş";
             // 
@@ -131,13 +131,13 @@ namespace CafeOto.WinForm.Kullanicilar
             // 
             this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(0, 43);
+            this.pictureEdit1.Location = new System.Drawing.Point(0, 37);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(118, 162);
+            this.pictureEdit1.Size = new System.Drawing.Size(118, 168);
             this.pictureEdit1.TabIndex = 6;
             // 
             // hypkaydol

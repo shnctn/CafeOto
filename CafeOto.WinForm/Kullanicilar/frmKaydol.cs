@@ -62,6 +62,7 @@ namespace CafeOto.WinForm.Kullanicilar
             {
                 MessageBox.Show("Şifreler aynı değildir. ");
             }
+           
         }
     }
 }
