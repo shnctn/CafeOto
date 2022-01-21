@@ -17,8 +17,8 @@ namespace CafeOto.WinForm.Menuler
             InitializeComponent();
             context.Menu.Load();
             gridControl1.DataSource = context.Menu.Local.ToBindingList();
-            KullaniciYetki.AdminMi(context,btnKaydet);
-            KullaniciYetki.AdminMi(context,btnSil);
+            KullaniciYetki.AdminMi(context,btnKaydet,btnSil);
+            
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)

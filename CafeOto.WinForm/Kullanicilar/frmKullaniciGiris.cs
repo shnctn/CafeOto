@@ -4,6 +4,8 @@ using CafeOto.WinForm.WinTools;
 using System;
 using System.Linq;
 using System.Windows.Forms;
+using CafeOto.WinForm.AnaMenu;
+using DevExpress.XtraBars;
 
 namespace CafeOto.WinForm.Kullanicilar
 {
@@ -74,6 +76,7 @@ namespace CafeOto.WinForm.Kullanicilar
             var model = context.Kullanicilar.FirstOrDefault(k => k.KullaniciAdi == txtKullaniciAdi.Text && k.Parola == txtParola.Text);
             if (model != null)
             {
+
                 giris = true;
                 BilgileriKaydet();
                 KullaniciAyarlari.KullaniciId=model.Id;
@@ -84,6 +87,7 @@ namespace CafeOto.WinForm.Kullanicilar
             }
             else
             {
+
                 MessageBox.Show("Kullanıcı Adı ve Şifreniz Hatalıdır.", "Uyarı", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
@@ -93,12 +97,14 @@ namespace CafeOto.WinForm.Kullanicilar
         {
             frmKaydol frm = new frmKaydol(new Entities.Models.Kullanicilar());
             frm.ShowDialog();
+           
         }
 
         private void btnSifremiUnuttum_Click(object sender, EventArgs e)
         {
             frmSifremiUnuttum frm = new frmSifremiUnuttum();
             frm.ShowDialog();
+           
         }
     }
 }

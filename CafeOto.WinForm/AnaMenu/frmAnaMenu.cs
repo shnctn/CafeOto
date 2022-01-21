@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
+using CafeOto.Entities.DAL;
 using CafeOto.Entities.Models;
 using CafeOto.WinForm.Kullanicilar;
 using CafeOto.WinForm.Masalar;
@@ -12,6 +13,7 @@ using CafeOto.WinForm.RaporFormlari;
 using CafeOto.WinForm.Roles;
 using CafeOto.WinForm.Satıslar;
 using CafeOto.WinForm.Urunler;
+using CafeOto.WinForm.WinTools;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 
@@ -20,6 +22,7 @@ namespace CafeOto.WinForm.AnaMenu
     public partial class frmAnaMenu : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         private CafeContext context = new CafeContext();
+        private KulanicilarDAL _kulanicilarDal = new KulanicilarDAL();
         void FormGetir(XtraForm frm)
         {
             frm.MdiParent = this;
@@ -27,19 +30,19 @@ namespace CafeOto.WinForm.AnaMenu
         }
         public frmAnaMenu()
         {
+           
             InitializeComponent();
-
             if (!context.Kullanicilar.Any(k => k.KullaniciAdi == "admin"))
             {
 
                 Entities.Models.Kullanicilar kullanici = new Entities.Models.Kullanicilar
                 {
-                    AdSoyad = "deneme ad soyad",
+                    AdSoyad = "Admin",
                     Telefon = "55555",
                     Adres = "123sdvdf asef",
                     Email = "deneme@mail.com",
                     KullaniciAdi = "admin",
-                    Parola = "12345",
+                    Parola = "admin",
                     HatirlatmaSorusu = "1",
                     Cevap = "1",
                     KayitTarihi = DateTime.Now,
@@ -47,12 +50,13 @@ namespace CafeOto.WinForm.AnaMenu
                 };
                 context.Kullanicilar.Add(kullanici);
                 context.SaveChanges();
+               
                 foreach (var item in ribbon.Items)
                 {
                     if (item is BarButtonItem)
                     {
                         var btn = item as BarButtonItem;
-                        if (btn.Caption!="")
+                        if (btn.Caption != "")
                         {
                             Roller roll = new Roller
                             {
@@ -70,10 +74,7 @@ namespace CafeOto.WinForm.AnaMenu
                 }
 
             }
-
-            XtraForm frm = new frmKullaniciGiris();
-            frm.ShowDialog();
-            KullaniciYetki.YetkileriGetir(context,ribbon);
+                 
         }
 
         private void btnUrunler_ItemClick(object sender, ItemClickEventArgs e)
@@ -163,6 +164,33 @@ namespace CafeOto.WinForm.AnaMenu
         private void btnMenuHareketleri_ItemClick(object sender, ItemClickEventArgs e)
         {
 
+        }
+
+        private void frmAnaMenu_Load(object sender, EventArgs e)
+        {
+            XtraForm frm = new frmKullaniciGiris();
+            frm.ShowDialog();
+            KullaniciYetki.YetkileriGetir(context, ribbon);
+
+        }
+
+        private void btnKullanici_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmKullanicilar frm = new frmKullanicilar();
+            FormGetir(frm);
+        }
+
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmKullanicilar frm = new frmKullanicilar();
+            FormGetir(frm);
+        }
+
+        private void btnBilgilerim_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var model = _kulanicilarDal.GetByFilter(context, k => k.Id == KullaniciAyarlari.KullaniciId);
+            frmKullaniciKayit frm = new frmKullaniciKayit(model,"test");
+            frm.ShowDialog();
         }
     }
 }

@@ -37,9 +37,8 @@ namespace CafeOto.WinForm.AnaMenu
             this.btnMenuHareketleri = new DevExpress.XtraBars.BarButtonItem();
             this.btnUrunler = new DevExpress.XtraBars.BarButtonItem();
             this.btnUrunHaraketleri = new DevExpress.XtraBars.BarButtonItem();
-            this.btnKullanici = new DevExpress.XtraBars.BarButtonItem();
             this.btnKullaniciHareketleri = new DevExpress.XtraBars.BarButtonItem();
-            this.btnRoller = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBilgilerim = new DevExpress.XtraBars.BarButtonItem();
             this.btnDoviz = new DevExpress.XtraBars.BarButtonItem();
             this.btnYardim = new DevExpress.XtraBars.BarButtonItem();
             this.btnHakkimizda = new DevExpress.XtraBars.BarButtonItem();
@@ -57,6 +56,7 @@ namespace CafeOto.WinForm.AnaMenu
             this.btnMasaHareketleriRapor = new DevExpress.XtraBars.BarButtonItem();
             this.btnOzelRapor = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.KAfa = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -84,9 +84,8 @@ namespace CafeOto.WinForm.AnaMenu
             this.btnMenuHareketleri,
             this.btnUrunler,
             this.btnUrunHaraketleri,
-            this.btnKullanici,
             this.btnKullaniciHareketleri,
-            this.btnRoller,
+            this.btnBilgilerim,
             this.btnDoviz,
             this.btnYardim,
             this.btnHakkimizda,
@@ -103,9 +102,10 @@ namespace CafeOto.WinForm.AnaMenu
             this.barButtonItem3,
             this.btnMasaHareketleriRapor,
             this.btnOzelRapor,
-            this.barButtonItem4});
+            this.barButtonItem4,
+            this.barButtonItem5});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 29;
+            this.ribbon.MaxItemId = 30;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.KAfa,
@@ -163,16 +163,6 @@ namespace CafeOto.WinForm.AnaMenu
             this.btnUrunHaraketleri.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.packageproduct_32x32;
             this.btnUrunHaraketleri.Name = "btnUrunHaraketleri";
             // 
-            // btnKullanici
-            // 
-            this.btnKullanici.ActAsDropDown = true;
-            this.btnKullanici.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
-            this.btnKullanici.Caption = "Kullanıcılar";
-            this.btnKullanici.Id = 7;
-            this.btnKullanici.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.customer_16x16;
-            this.btnKullanici.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.customer_32x32;
-            this.btnKullanici.Name = "btnKullanici";
-            // 
             // btnKullaniciHareketleri
             // 
             this.btnKullaniciHareketleri.Caption = "Kullanıcı Hareketleri";
@@ -181,13 +171,14 @@ namespace CafeOto.WinForm.AnaMenu
             this.btnKullaniciHareketleri.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.usergroup_32x32;
             this.btnKullaniciHareketleri.Name = "btnKullaniciHareketleri";
             // 
-            // btnRoller
+            // btnBilgilerim
             // 
-            this.btnRoller.Caption = "Rol Tanımlama";
-            this.btnRoller.Id = 9;
-            this.btnRoller.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.borole_16x16;
-            this.btnRoller.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.borole_32x32;
-            this.btnRoller.Name = "btnRoller";
+            this.btnBilgilerim.Caption = "Bilgilerim";
+            this.btnBilgilerim.Id = 9;
+            this.btnBilgilerim.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.borole_16x16;
+            this.btnBilgilerim.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.borole_32x32;
+            this.btnBilgilerim.Name = "btnBilgilerim";
+            this.btnBilgilerim.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBilgilerim_ItemClick);
             // 
             // btnDoviz
             // 
@@ -318,6 +309,15 @@ namespace CafeOto.WinForm.AnaMenu
             this.barButtonItem4.Name = "barButtonItem4";
             this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
+            // barButtonItem5
+            // 
+            this.barButtonItem5.Caption = "Kullanıcılar";
+            this.barButtonItem5.Id = 29;
+            this.barButtonItem5.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.customer_16x161;
+            this.barButtonItem5.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.customer_32x321;
+            this.barButtonItem5.Name = "barButtonItem5";
+            this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
+            // 
             // KAfa
             // 
             this.KAfa.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -356,9 +356,9 @@ namespace CafeOto.WinForm.AnaMenu
             // 
             // ribbonPageGroup5
             // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.btnKullanici);
+            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem5);
             this.ribbonPageGroup5.ItemLinks.Add(this.btnKullaniciHareketleri);
-            this.ribbonPageGroup5.ItemLinks.Add(this.btnRoller);
+            this.ribbonPageGroup5.ItemLinks.Add(this.btnBilgilerim);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "KULLANICILAR";
             // 
@@ -428,6 +428,7 @@ namespace CafeOto.WinForm.AnaMenu
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Cafe Otomasyonu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmAnaMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -435,8 +436,6 @@ namespace CafeOto.WinForm.AnaMenu
         }
 
         #endregion
-
-        private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
@@ -450,10 +449,9 @@ namespace CafeOto.WinForm.AnaMenu
         private DevExpress.XtraBars.BarButtonItem btnUrunler;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarButtonItem btnUrunHaraketleri;
-        private DevExpress.XtraBars.BarButtonItem btnKullanici;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.BarButtonItem btnKullaniciHareketleri;
-        private DevExpress.XtraBars.BarButtonItem btnRoller;
+        private DevExpress.XtraBars.BarButtonItem btnBilgilerim;
         private DevExpress.XtraBars.BarButtonItem btnDoviz;
         private DevExpress.XtraBars.BarButtonItem btnYardim;
         private DevExpress.XtraBars.BarButtonItem btnHakkimizda;
@@ -475,5 +473,7 @@ namespace CafeOto.WinForm.AnaMenu
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraBars.BarButtonItem btnOzelRapor;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        public DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
     }
 }

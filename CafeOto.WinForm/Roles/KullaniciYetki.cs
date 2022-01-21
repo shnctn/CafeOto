@@ -35,16 +35,23 @@ namespace CafeOto.WinForm.Roles
             }
         }
 
-        public static void AdminMi(CafeContext context, dynamic obj)
+        public static void AdminMi(CafeContext context,params dynamic[] obj)
         {
             var adminControl = context.Kullanicilar.FirstOrDefault(k => k.Id == KullaniciAyarlari.KullaniciId);
             if (adminControl.isAdmin)
             {
-                obj.Enabled = true;
+                for (int i = 0; i < obj.Length; i++)
+                {
+                    obj[i].Enabled = true;
+                }
+                
             }
             else if (!adminControl.isAdmin)
             {
-                obj.Enabled = false;
+                for (int i = 0; i < obj.Length; i++)
+                {
+                    obj[i].Enabled = false;
+                }
             }
         }
     }

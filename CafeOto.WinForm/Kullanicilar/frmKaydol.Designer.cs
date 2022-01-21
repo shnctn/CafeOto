@@ -105,7 +105,7 @@ namespace CafeOto.WinForm.Kullanicilar
             this.btnKapat.Location = new System.Drawing.Point(287, 26);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(75, 48);
-            this.btnKapat.TabIndex = 14;
+            this.btnKapat.TabIndex = 13;
             this.btnKapat.Text = "KAPAT";
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
@@ -115,7 +115,7 @@ namespace CafeOto.WinForm.Kullanicilar
             this.btnUrunKaydet.Location = new System.Drawing.Point(5, 26);
             this.btnUrunKaydet.Name = "btnUrunKaydet";
             this.btnUrunKaydet.Size = new System.Drawing.Size(101, 48);
-            this.btnUrunKaydet.TabIndex = 13;
+            this.btnUrunKaydet.TabIndex = 12;
             this.btnUrunKaydet.Text = "YENİ KAYIT";
             this.btnUrunKaydet.Click += new System.EventHandler(this.btnUrunKaydet_Click);
             // 
@@ -182,7 +182,7 @@ namespace CafeOto.WinForm.Kullanicilar
             this.txtTelefon.Location = new System.Drawing.Point(140, 100);
             this.txtTelefon.Name = "txtTelefon";
             this.txtTelefon.Size = new System.Drawing.Size(219, 20);
-            this.txtTelefon.TabIndex = 3;
+            this.txtTelefon.TabIndex = 2;
             // 
             // labelControl5
             // 
@@ -217,7 +217,7 @@ namespace CafeOto.WinForm.Kullanicilar
             this.txtgörev.Location = new System.Drawing.Point(140, 202);
             this.txtgörev.Name = "txtgörev";
             this.txtgörev.Size = new System.Drawing.Size(219, 20);
-            this.txtgörev.TabIndex = 6;
+            this.txtgörev.TabIndex = 5;
             // 
             // labelControl7
             // 
@@ -238,7 +238,7 @@ namespace CafeOto.WinForm.Kullanicilar
             this.txtKullaniciAdi.Location = new System.Drawing.Point(140, 231);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(219, 20);
-            this.txtKullaniciAdi.TabIndex = 7;
+            this.txtKullaniciAdi.TabIndex = 6;
             // 
             // labelControl8
             // 
@@ -261,7 +261,7 @@ namespace CafeOto.WinForm.Kullanicilar
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Properties.UseSystemPasswordChar = true;
             this.txtSifre.Size = new System.Drawing.Size(219, 20);
-            this.txtSifre.TabIndex = 8;
+            this.txtSifre.TabIndex = 7;
             // 
             // labelControl9
             // 
@@ -283,7 +283,7 @@ namespace CafeOto.WinForm.Kullanicilar
             this.txtSifreTekrar.Name = "txtSifreTekrar";
             this.txtSifreTekrar.Properties.UseSystemPasswordChar = true;
             this.txtSifreTekrar.Size = new System.Drawing.Size(219, 20);
-            this.txtSifreTekrar.TabIndex = 9;
+            this.txtSifreTekrar.TabIndex = 8;
             // 
             // labelControl10
             // 
@@ -304,7 +304,7 @@ namespace CafeOto.WinForm.Kullanicilar
             this.txtHatırlatmaSoru.Location = new System.Drawing.Point(140, 318);
             this.txtHatırlatmaSoru.Name = "txtHatırlatmaSoru";
             this.txtHatırlatmaSoru.Size = new System.Drawing.Size(219, 20);
-            this.txtHatırlatmaSoru.TabIndex = 10;
+            this.txtHatırlatmaSoru.TabIndex = 9;
             // 
             // labelControl11
             // 
@@ -325,7 +325,7 @@ namespace CafeOto.WinForm.Kullanicilar
             this.txtCevap.Location = new System.Drawing.Point(140, 347);
             this.txtCevap.Name = "txtCevap";
             this.txtCevap.Size = new System.Drawing.Size(219, 20);
-            this.txtCevap.TabIndex = 11;
+            this.txtCevap.TabIndex = 10;
             // 
             // labelControl12
             // 
@@ -346,14 +346,14 @@ namespace CafeOto.WinForm.Kullanicilar
             this.txtAciklama.Location = new System.Drawing.Point(140, 377);
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Size = new System.Drawing.Size(219, 64);
-            this.txtAciklama.TabIndex = 12;
+            this.txtAciklama.TabIndex = 11;
             // 
             // txtAdres
             // 
             this.txtAdres.Location = new System.Drawing.Point(140, 126);
             this.txtAdres.Name = "txtAdres";
             this.txtAdres.Size = new System.Drawing.Size(219, 43);
-            this.txtAdres.TabIndex = 4;
+            this.txtAdres.TabIndex = 3;
             // 
             // labelControl13
             // 
@@ -374,7 +374,7 @@ namespace CafeOto.WinForm.Kullanicilar
             this.txtEmail.Location = new System.Drawing.Point(140, 175);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(219, 20);
-            this.txtEmail.TabIndex = 5;
+            this.txtEmail.TabIndex = 4;
             // 
             // frmKaydol
             // 
@@ -412,6 +412,7 @@ namespace CafeOto.WinForm.Kullanicilar
             this.Name = "frmKaydol";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kaydol";
+            this.Load += new System.EventHandler(this.frmKaydol_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtAdSoyad.Properties)).EndInit();

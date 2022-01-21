@@ -3,6 +3,8 @@ using CafeOto.Entities.Models;
 using System;
 using System.Linq;
 using System.Windows.Forms;
+using CafeOto.WinForm.AnaMenu;
+using DevExpress.XtraBars;
 
 namespace CafeOto.WinForm.Kullanicilar
 {
@@ -51,7 +53,26 @@ namespace CafeOto.WinForm.Kullanicilar
                     KullaniciHareketleri.KullaniciId = model;
                     string aciklama = "Yeni kullanıcı Oluşturuldu.";
                     KullaniciHareketleriDAL.kullaniciHareketleriEkle(context, KullaniciHareketleri, aciklama);
+                    frmAnaMenu frm = new frmAnaMenu();
+                    foreach (var item in frm.ribbon.Items)
+                        if (item is BarButtonItem)
+                        {
+                            var btn = item as BarButtonItem;
+                            if (btn.Caption != "")
+                            {
+                                Roller roll = new Roller
+                                {
+                                    KullaniciId = context.Kullanicilar.Max(k=>k.Id),
+                                    FormName = "frmAnaMenu",
+                                    ControlCaption = btn.Caption,
+                                    ControlName = btn.Name,
+                                    Visible = false
 
+                                };
+                                context.Roller.Add(roll);
+                                context.SaveChanges();
+                            }
+                        }
 
                     this.Close();
 
@@ -63,6 +84,11 @@ namespace CafeOto.WinForm.Kullanicilar
                 MessageBox.Show("Şifreler aynı değildir. ");
             }
            
+        }
+
+        private void frmKaydol_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
