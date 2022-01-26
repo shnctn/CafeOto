@@ -57,6 +57,8 @@ namespace CafeOto.WinForm.AnaMenu
             this.btnOzelRapor = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAyarlar = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.KAfa = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -103,9 +105,11 @@ namespace CafeOto.WinForm.AnaMenu
             this.btnMasaHareketleriRapor,
             this.btnOzelRapor,
             this.barButtonItem4,
-            this.barButtonItem5});
+            this.barButtonItem5,
+            this.btnAyarlar,
+            this.barButtonItem6});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 30;
+            this.ribbon.MaxItemId = 32;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.KAfa,
@@ -318,6 +322,24 @@ namespace CafeOto.WinForm.AnaMenu
             this.barButtonItem5.Name = "barButtonItem5";
             this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
             // 
+            // btnAyarlar
+            // 
+            this.btnAyarlar.Caption = "Ayarlar";
+            this.btnAyarlar.Id = 30;
+            this.btnAyarlar.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.properties_16x16;
+            this.btnAyarlar.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.properties_32x32;
+            this.btnAyarlar.Name = "btnAyarlar";
+            this.btnAyarlar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAyarlar_ItemClick);
+            // 
+            // barButtonItem6
+            // 
+            this.barButtonItem6.Caption = "Yedekleme";
+            this.barButtonItem6.Id = 31;
+            this.barButtonItem6.ImageOptions.Image = global::CafeOto.WinForm.Properties.Resources.database_16x16;
+            this.barButtonItem6.ImageOptions.LargeImage = global::CafeOto.WinForm.Properties.Resources.database_32x32;
+            this.barButtonItem6.Name = "barButtonItem6";
+            this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
+            // 
             // KAfa
             // 
             this.KAfa.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -402,6 +424,8 @@ namespace CafeOto.WinForm.AnaMenu
             this.ribbonPageGroup1.ItemLinks.Add(this.btnDoviz);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnYardim);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnHakkimizda);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnAyarlar);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem6);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "AYARLAR";
             // 
@@ -475,5 +499,7 @@ namespace CafeOto.WinForm.AnaMenu
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         public DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
+        private DevExpress.XtraBars.BarButtonItem btnAyarlar;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
     }
 }

@@ -5,7 +5,7 @@ namespace CafeOto.Entities.Models
 {
     public class CafeContext : DbContext
     {
-        public CafeContext() : base("name=Connection")
+        public CafeContext() : base("Data Source=SHN\\SQLEXPRESS; Initial Catalog=Cafe; Integrated Security=true ")
         {
 
         }
@@ -20,8 +20,10 @@ namespace CafeOto.Entities.Models
         public DbSet<KullaniciHareketleri> KullaniciHareketleri { get; set; }
         public DbSet<Kullanicilar> Kullanicilar { get; set; }
         public DbSet<SatisKodu> SatisKodu { get; set; }
-        public DbSet<Musteriler> Musteriler { get; set; }
+        public DbSet<Musteriler> Musteriler { get; set; } 
+        public DbSet<ProgramAyarlari> ProgramAyarlari { get; set; }
 
+       
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

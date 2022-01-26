@@ -3,6 +3,7 @@ using System.Linq;
 using System.Windows.Forms;
 using CafeOto.Entities.DAL;
 using CafeOto.Entities.Models;
+using CafeOto.WinForm.Ayarlar;
 using CafeOto.WinForm.Kullanicilar;
 using CafeOto.WinForm.Masalar;
 using CafeOto.WinForm.Menuler;
@@ -190,6 +191,18 @@ namespace CafeOto.WinForm.AnaMenu
         {
             var model = _kulanicilarDal.GetByFilter(context, k => k.Id == KullaniciAyarlari.KullaniciId);
             frmKullaniciKayit frm = new frmKullaniciKayit(model,"test");
+            frm.ShowDialog();
+        }
+
+        private void btnAyarlar_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmAyarlar frm = new frmAyarlar();
+            frm.ShowDialog();
+        }
+
+        private void barButtonItem6_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmYedekleme frm = new frmYedekleme();
             frm.ShowDialog();
         }
     }

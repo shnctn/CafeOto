@@ -27,7 +27,7 @@ namespace CafeOto.WinForm.Masalar
         private UrunDAL urunDal = new UrunDAL();
         private bool _paketSiparis;
         private bool yazdir;
-
+        frmUrunSec frm = new frmUrunSec();
 
 
 
@@ -113,11 +113,34 @@ namespace CafeOto.WinForm.Masalar
             }
         }
 
+        decimal fiyat()
+        {
+            decimal birimfiyat = frm.urunModel.BirimFiyat;
+            var modelprogram = context.ProgramAyarlari.FirstOrDefault(p => p.AyarTanimi == "BirimFiyat");
+            if (modelprogram!=null)
+            {
+                switch (modelprogram.AyarAdi)
+                {
+                    case "BirimFiyat":
+                        birimfiyat = frm.urunModel.BirimFiyat;
+                        break;
+                    case "BirimFiyat2":
+                        birimfiyat = frm.urunModel.BirimFiyat2;
+                        break;
+                    case "BirimFiyat3":
+                        birimfiyat = frm.urunModel.BirimFiyat3;
+                        break;
+                  
+                }
+            }
+
+            return birimfiyat;
+        }
 
 
         private void btnSiparisEkle_Click(object sender, EventArgs e)
         {
-            frmUrunSec frm = new frmUrunSec();
+            
             frm.ShowDialog();
             if (frm.secildi)
             {
@@ -127,7 +150,7 @@ namespace CafeOto.WinForm.Masalar
                     MasaId = _masaId,
                     UrunId = frm.urunModel.Id,
                     Miktari = 1,
-                    BirimFiyati = frm.urunModel.BirimFiyat,
+                    BirimFiyati = fiyat(),
                     IndirimTutari = 0,
                     Aciklama = " ",
                     SonIslemTarih = DateTime.Now

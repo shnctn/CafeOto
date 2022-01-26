@@ -100,6 +100,7 @@
     <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\Musteriler.cs" />
     <Compile Include="Models\OdemeHareketleri.cs" />
+    <Compile Include="Models\ProgramAyarlari.cs" />
     <Compile Include="Models\Roller.cs" />
     <Compile Include="Models\SatisKodu.cs" />
     <Compile Include="Models\Satislar.cs" />
@@ -111,6 +112,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Repository\EntityRepositoryBase.cs" />
+    <Compile Include="Tools\ConnectionTools.cs" />
     <Compile Include="Tools\ValidatorTools.cs" />
     <Compile Include="Validations\KullaniciHareketleriValidator.cs" />
     <Compile Include="Validations\KullanicilarValidator.cs" />
